@@ -16,5 +16,10 @@ namespace ArticulosAppViews
         {
             InitializeComponent();
         }
+
+        private void buttonArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

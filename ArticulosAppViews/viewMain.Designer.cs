@@ -63,7 +63,6 @@
             this.buttonArticulos.TabIndex = 0;
             this.buttonArticulos.Text = "Articulos";
             this.buttonArticulos.UseVisualStyleBackColor = false;
-            this.buttonArticulos.Click += new System.EventHandler(this.buttonArticulos_Click);
             // 
             // buttonMarcas
             // 

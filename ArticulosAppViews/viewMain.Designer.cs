@@ -1,6 +1,6 @@
 ﻿namespace ArticulosAppViews
 {
-    partial class Form1
+    partial class viewMain
     {
         /// <summary>
         /// Required designer variable.

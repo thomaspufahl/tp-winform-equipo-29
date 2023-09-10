@@ -29,22 +29,25 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.labelLogo = new System.Windows.Forms.Label();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonCategorias = new System.Windows.Forms.Button();
             this.buttonMarcas = new System.Windows.Forms.Button();
             this.buttonArticulos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.labelLogo = new System.Windows.Forms.Label();
             this.panelWindowTitle = new System.Windows.Forms.Panel();
             this.labelWindowTitle = new System.Windows.Forms.Label();
             this.panelWindows = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelWindowTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.labelLogo);
             this.panelMenu.Controls.Add(this.buttonSalir);
             this.panelMenu.Controls.Add(this.buttonCategorias);
@@ -57,6 +60,19 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(180, 537);
             this.panelMenu.TabIndex = 0;
+            // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
+            this.labelLogo.Location = new System.Drawing.Point(19, 27);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(141, 26);
+            this.labelLogo.TabIndex = 0;
+            this.labelLogo.Text = "Artículos App";
+            this.labelLogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonSalir
             // 
@@ -136,19 +152,6 @@
             this.panelLogo.Size = new System.Drawing.Size(180, 80);
             this.panelLogo.TabIndex = 5;
             // 
-            // labelLogo
-            // 
-            this.labelLogo.AutoSize = true;
-            this.labelLogo.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.labelLogo.Location = new System.Drawing.Point(19, 27);
-            this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(141, 26);
-            this.labelLogo.TabIndex = 0;
-            this.labelLogo.Text = "Artículos App";
-            this.labelLogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panelWindowTitle
             // 
             this.panelWindowTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(119)))), ((int)(((byte)(146)))));
@@ -183,6 +186,18 @@
             this.panelWindows.Size = new System.Drawing.Size(828, 457);
             this.panelWindows.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::ArticulosAppViews.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(-11, 258);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 224);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
+            // 
             // viewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +215,7 @@
             this.panelMenu.PerformLayout();
             this.panelWindowTitle.ResumeLayout(false);
             this.panelWindowTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,6 +232,7 @@
         private System.Windows.Forms.Panel panelWindowTitle;
         private System.Windows.Forms.Label labelWindowTitle;
         private System.Windows.Forms.Panel panelWindows;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

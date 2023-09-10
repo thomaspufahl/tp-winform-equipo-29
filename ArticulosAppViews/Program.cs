@@ -16,7 +16,7 @@ namespace ArticulosAppViews
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new viewArticulos());
+            Application.Run(new viewCategorias());
         }
     }
 }

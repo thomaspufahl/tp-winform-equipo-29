@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pictureBoxDecorationImage = new System.Windows.Forms.PictureBox();
             this.labelLogo = new System.Windows.Forms.Label();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonCategorias = new System.Windows.Forms.Button();
@@ -38,16 +39,15 @@
             this.panelWindowTitle = new System.Windows.Forms.Panel();
             this.labelWindowTitle = new System.Windows.Forms.Label();
             this.panelWindows = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDecorationImage)).BeginInit();
             this.panelWindowTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.pictureBoxDecorationImage);
             this.panelMenu.Controls.Add(this.labelLogo);
             this.panelMenu.Controls.Add(this.buttonSalir);
             this.panelMenu.Controls.Add(this.buttonCategorias);
@@ -60,6 +60,20 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(180, 537);
             this.panelMenu.TabIndex = 0;
+            // 
+            // pictureBoxDecorationImage
+            // 
+            this.pictureBoxDecorationImage.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxDecorationImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxDecorationImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxDecorationImage.Image = global::ArticulosAppViews.Properties.Resources.logo1;
+            this.pictureBoxDecorationImage.Location = new System.Drawing.Point(0, 260);
+            this.pictureBoxDecorationImage.Name = "pictureBoxDecorationImage";
+            this.pictureBoxDecorationImage.Size = new System.Drawing.Size(180, 217);
+            this.pictureBoxDecorationImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDecorationImage.TabIndex = 10;
+            this.pictureBoxDecorationImage.TabStop = false;
+            this.pictureBoxDecorationImage.UseWaitCursor = true;
             // 
             // labelLogo
             // 
@@ -186,18 +200,6 @@
             this.panelWindows.Size = new System.Drawing.Size(828, 457);
             this.panelWindows.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::ArticulosAppViews.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(-11, 258);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 224);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
-            // 
             // viewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,9 +215,9 @@
             this.Text = "Artículos App";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDecorationImage)).EndInit();
             this.panelWindowTitle.ResumeLayout(false);
             this.panelWindowTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,7 +234,7 @@
         private System.Windows.Forms.Panel panelWindowTitle;
         private System.Windows.Forms.Label labelWindowTitle;
         private System.Windows.Forms.Panel panelWindows;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxDecorationImage;
     }
 }
 

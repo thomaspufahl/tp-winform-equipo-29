@@ -210,6 +210,7 @@
             this.Controls.Add(this.panelWindowTitle);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "viewMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículos App";

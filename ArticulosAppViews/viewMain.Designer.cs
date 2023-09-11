@@ -99,7 +99,7 @@
             this.buttonCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCategorias.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonCategorias.Location = new System.Drawing.Point(0, 323);
+            this.buttonCategorias.Location = new System.Drawing.Point(0, 292);
             this.buttonCategorias.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonCategorias.Name = "buttonCategorias";
             this.buttonCategorias.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -115,7 +115,7 @@
             this.buttonMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMarcas.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonMarcas.Location = new System.Drawing.Point(0, 251);
+            this.buttonMarcas.Location = new System.Drawing.Point(0, 220);
             this.buttonMarcas.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonMarcas.Name = "buttonMarcas";
             this.buttonMarcas.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -131,7 +131,7 @@
             this.buttonArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonArticulos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonArticulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonArticulos.Location = new System.Drawing.Point(0, 177);
+            this.buttonArticulos.Location = new System.Drawing.Point(0, 146);
             this.buttonArticulos.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonArticulos.Name = "buttonArticulos";
             this.buttonArticulos.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -216,7 +216,7 @@
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.MaximumSize = new System.Drawing.Size(1024, 576);
+            this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "viewMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

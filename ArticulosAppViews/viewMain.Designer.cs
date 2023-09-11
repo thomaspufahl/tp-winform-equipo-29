@@ -57,9 +57,9 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(210, 578);
+            this.panelMenu.Size = new System.Drawing.Size(240, 537);
             this.panelMenu.TabIndex = 0;
             // 
             // labelLogo
@@ -68,8 +68,8 @@
             this.labelLogo.BackColor = System.Drawing.Color.Transparent;
             this.labelLogo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.labelLogo.Location = new System.Drawing.Point(22, 29);
-            this.labelLogo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelLogo.Location = new System.Drawing.Point(25, 29);
+            this.labelLogo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(150, 25);
             this.labelLogo.TabIndex = 0;
@@ -83,11 +83,11 @@
             this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonSalir.Location = new System.Drawing.Point(0, 513);
-            this.buttonSalir.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.buttonSalir.Location = new System.Drawing.Point(0, 472);
+            this.buttonSalir.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.buttonSalir.Size = new System.Drawing.Size(210, 65);
+            this.buttonSalir.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.buttonSalir.Size = new System.Drawing.Size(240, 65);
             this.buttonSalir.TabIndex = 9;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,10 +100,10 @@
             this.buttonCategorias.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
             this.buttonCategorias.Location = new System.Drawing.Point(0, 323);
-            this.buttonCategorias.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.buttonCategorias.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonCategorias.Name = "buttonCategorias";
-            this.buttonCategorias.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.buttonCategorias.Size = new System.Drawing.Size(210, 65);
+            this.buttonCategorias.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.buttonCategorias.Size = new System.Drawing.Size(240, 65);
             this.buttonCategorias.TabIndex = 8;
             this.buttonCategorias.Text = "Categorías";
             this.buttonCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,10 +116,10 @@
             this.buttonMarcas.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
             this.buttonMarcas.Location = new System.Drawing.Point(0, 251);
-            this.buttonMarcas.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.buttonMarcas.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonMarcas.Name = "buttonMarcas";
-            this.buttonMarcas.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.buttonMarcas.Size = new System.Drawing.Size(210, 65);
+            this.buttonMarcas.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.buttonMarcas.Size = new System.Drawing.Size(240, 65);
             this.buttonMarcas.TabIndex = 7;
             this.buttonMarcas.Text = "Marcas";
             this.buttonMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,10 +132,10 @@
             this.buttonArticulos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonArticulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
             this.buttonArticulos.Location = new System.Drawing.Point(0, 177);
-            this.buttonArticulos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.buttonArticulos.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonArticulos.Name = "buttonArticulos";
-            this.buttonArticulos.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.buttonArticulos.Size = new System.Drawing.Size(210, 65);
+            this.buttonArticulos.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.buttonArticulos.Size = new System.Drawing.Size(240, 65);
             this.buttonArticulos.TabIndex = 6;
             this.buttonArticulos.Text = "Artículos";
             this.buttonArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,9 +147,9 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(210, 85);
+            this.panelLogo.Size = new System.Drawing.Size(240, 85);
             this.panelLogo.TabIndex = 5;
             // 
             // pictureBoxDecorationImage
@@ -159,9 +159,9 @@
             this.pictureBoxDecorationImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxDecorationImage.Image = global::ArticulosAppViews.Properties.Resources.logo;
             this.pictureBoxDecorationImage.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxDecorationImage.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.pictureBoxDecorationImage.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.pictureBoxDecorationImage.Name = "pictureBoxDecorationImage";
-            this.pictureBoxDecorationImage.Size = new System.Drawing.Size(966, 493);
+            this.pictureBoxDecorationImage.Size = new System.Drawing.Size(768, 452);
             this.pictureBoxDecorationImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxDecorationImage.TabIndex = 10;
             this.pictureBoxDecorationImage.TabStop = false;
@@ -173,10 +173,10 @@
             this.panelWindowTitle.Controls.Add(this.labelWindowTitle);
             this.panelWindowTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWindowTitle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelWindowTitle.Location = new System.Drawing.Point(210, 0);
-            this.panelWindowTitle.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelWindowTitle.Location = new System.Drawing.Point(240, 0);
+            this.panelWindowTitle.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelWindowTitle.Name = "panelWindowTitle";
-            this.panelWindowTitle.Size = new System.Drawing.Size(966, 85);
+            this.panelWindowTitle.Size = new System.Drawing.Size(768, 85);
             this.panelWindowTitle.TabIndex = 1;
             // 
             // labelWindowTitle
@@ -184,8 +184,8 @@
             this.labelWindowTitle.AutoSize = true;
             this.labelWindowTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWindowTitle.ForeColor = System.Drawing.Color.White;
-            this.labelWindowTitle.Location = new System.Drawing.Point(22, 29);
-            this.labelWindowTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelWindowTitle.Location = new System.Drawing.Point(25, 29);
+            this.labelWindowTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWindowTitle.Name = "labelWindowTitle";
             this.labelWindowTitle.Size = new System.Drawing.Size(76, 25);
             this.labelWindowTitle.TabIndex = 0;
@@ -198,26 +198,27 @@
             this.panelWindows.Controls.Add(this.pictureBoxDecorationImage);
             this.panelWindows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelWindows.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelWindows.Location = new System.Drawing.Point(210, 85);
-            this.panelWindows.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelWindows.Location = new System.Drawing.Point(240, 85);
+            this.panelWindows.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelWindows.Name = "panelWindows";
-            this.panelWindows.Size = new System.Drawing.Size(966, 493);
+            this.panelWindows.Size = new System.Drawing.Size(768, 452);
             this.panelWindows.TabIndex = 2;
             // 
             // viewMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1176, 578);
+            this.ClientSize = new System.Drawing.Size(1008, 537);
             this.Controls.Add(this.panelWindows);
             this.Controls.Add(this.panelWindowTitle);
             this.Controls.Add(this.panelMenu);
-            this.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.MinimumSize = new System.Drawing.Size(1126, 617);
+            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.MaximumSize = new System.Drawing.Size(1024, 576);
             this.Name = "viewMain";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículos App";
             this.panelMenu.ResumeLayout(false);

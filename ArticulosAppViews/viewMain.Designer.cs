@@ -35,14 +35,11 @@
             this.buttonMarcas = new System.Windows.Forms.Button();
             this.buttonArticulos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBoxDecorationImage = new System.Windows.Forms.PictureBox();
             this.panelWindowTitle = new System.Windows.Forms.Panel();
             this.labelWindowTitle = new System.Windows.Forms.Label();
             this.panelWindows = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDecorationImage)).BeginInit();
             this.panelWindowTitle.SuspendLayout();
-            this.panelWindows.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -152,21 +149,6 @@
             this.panelLogo.Size = new System.Drawing.Size(240, 85);
             this.panelLogo.TabIndex = 5;
             // 
-            // pictureBoxDecorationImage
-            // 
-            this.pictureBoxDecorationImage.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxDecorationImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxDecorationImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxDecorationImage.Image = global::ArticulosAppViews.Properties.Resources.logo;
-            this.pictureBoxDecorationImage.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxDecorationImage.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
-            this.pictureBoxDecorationImage.Name = "pictureBoxDecorationImage";
-            this.pictureBoxDecorationImage.Size = new System.Drawing.Size(768, 452);
-            this.pictureBoxDecorationImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDecorationImage.TabIndex = 10;
-            this.pictureBoxDecorationImage.TabStop = false;
-            this.pictureBoxDecorationImage.UseWaitCursor = true;
-            // 
             // panelWindowTitle
             // 
             this.panelWindowTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
@@ -195,7 +177,6 @@
             // panelWindows
             // 
             this.panelWindows.BackColor = System.Drawing.Color.Transparent;
-            this.panelWindows.Controls.Add(this.pictureBoxDecorationImage);
             this.panelWindows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelWindows.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelWindows.Location = new System.Drawing.Point(240, 85);
@@ -223,10 +204,8 @@
             this.Text = "Artículos App";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDecorationImage)).EndInit();
             this.panelWindowTitle.ResumeLayout(false);
             this.panelWindowTitle.PerformLayout();
-            this.panelWindows.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -243,7 +222,6 @@
         private System.Windows.Forms.Panel panelWindowTitle;
         private System.Windows.Forms.Label labelWindowTitle;
         private System.Windows.Forms.Panel panelWindows;
-        private System.Windows.Forms.PictureBox pictureBoxDecorationImage;
     }
 }
 

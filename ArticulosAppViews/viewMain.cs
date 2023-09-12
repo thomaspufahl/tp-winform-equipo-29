@@ -16,5 +16,7 @@ namespace ArticulosAppViews
         {
             InitializeComponent();
         }
+
+        private void buttonSalir_Click(object sender, EventArgs e) { Close(); }
     }
 }

@@ -89,6 +89,7 @@
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // buttonCategorias
             // 
@@ -105,6 +106,7 @@
             this.buttonCategorias.Text = "Categorías";
             this.buttonCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCategorias.UseVisualStyleBackColor = true;
+            this.buttonCategorias.Click += new System.EventHandler(this.buttonCategorias_Click);
             // 
             // buttonMarcas
             // 
@@ -121,6 +123,7 @@
             this.buttonMarcas.Text = "Marcas";
             this.buttonMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMarcas.UseVisualStyleBackColor = true;
+            this.buttonMarcas.Click += new System.EventHandler(this.buttonMarcas_Click);
             // 
             // buttonArticulos
             // 
@@ -137,6 +140,7 @@
             this.buttonArticulos.Text = "Artículos";
             this.buttonArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArticulos.UseVisualStyleBackColor = true;
+            this.buttonArticulos.Click += new System.EventHandler(this.buttonArticulos_Click);
             // 
             // panelLogo
             // 

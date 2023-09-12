@@ -44,6 +44,7 @@
             // dataGridViewMarcas
             // 
             this.dataGridViewMarcas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dataGridViewMarcas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMarcas.Location = new System.Drawing.Point(0, 0);

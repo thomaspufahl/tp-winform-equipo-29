@@ -56,7 +56,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 537);
+            this.panelMenu.Size = new System.Drawing.Size(240, 609);
             this.panelMenu.TabIndex = 0;
             // 
             // labelLogo
@@ -80,7 +80,7 @@
             this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonSalir.Location = new System.Drawing.Point(0, 472);
+            this.buttonSalir.Location = new System.Drawing.Point(0, 544);
             this.buttonSalir.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -106,6 +106,7 @@
             this.buttonCategorias.Text = "Categorías";
             this.buttonCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCategorias.UseVisualStyleBackColor = true;
+            this.buttonCategorias.Click += new System.EventHandler(this.buttonCategorias_Click);
             // 
             // buttonMarcas
             // 
@@ -122,6 +123,7 @@
             this.buttonMarcas.Text = "Marcas";
             this.buttonMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMarcas.UseVisualStyleBackColor = true;
+            this.buttonMarcas.Click += new System.EventHandler(this.buttonMarcas_Click);
             // 
             // buttonArticulos
             // 
@@ -138,6 +140,7 @@
             this.buttonArticulos.Text = "Artículos";
             this.buttonArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArticulos.UseVisualStyleBackColor = true;
+            this.buttonArticulos.Click += new System.EventHandler(this.buttonArticulos_Click);
             // 
             // panelLogo
             // 
@@ -159,7 +162,7 @@
             this.panelWindowTitle.Location = new System.Drawing.Point(240, 0);
             this.panelWindowTitle.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelWindowTitle.Name = "panelWindowTitle";
-            this.panelWindowTitle.Size = new System.Drawing.Size(768, 85);
+            this.panelWindowTitle.Size = new System.Drawing.Size(896, 85);
             this.panelWindowTitle.TabIndex = 1;
             // 
             // labelWindowTitle
@@ -177,28 +180,26 @@
             // 
             // panelWindows
             // 
-            this.panelWindows.BackColor = System.Drawing.Color.Transparent;
             this.panelWindows.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelWindows.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelWindows.Location = new System.Drawing.Point(240, 85);
-            this.panelWindows.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelWindows.Name = "panelWindows";
-            this.panelWindows.Size = new System.Drawing.Size(768, 452);
-            this.panelWindows.TabIndex = 2;
+            this.panelWindows.Size = new System.Drawing.Size(896, 524);
+            this.panelWindows.TabIndex = 3;
             // 
             // viewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.ClientSize = new System.Drawing.Size(1136, 609);
             this.Controls.Add(this.panelWindows);
             this.Controls.Add(this.panelWindowTitle);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.MinimumSize = new System.Drawing.Size(1024, 576);
+            this.MinimumSize = new System.Drawing.Size(1152, 648);
             this.Name = "viewMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

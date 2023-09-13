@@ -13,26 +13,31 @@ namespace ArticulosAppViews
     public partial class viewMain : Form
     {
         private Form activeChildForm = null;
+        private Button activeButton = null;
+
         public viewMain()
         {
             InitializeComponent();
         }
+
         private void buttonArticulos_Click(object sender, EventArgs e)
         {
             viewArticulos childForm = new viewArticulos();
+            ChangeButtonState(sender);
             OpenChildForm(childForm);
         }
         private void buttonMarcas_Click(object sender, EventArgs e)
         {
             viewMarcas childForm = new viewMarcas();
+            ChangeButtonState(sender);
             OpenChildForm(childForm);
         }
         private void buttonCategorias_Click(object sender, EventArgs e)
         {
             viewCategorias childForm = new viewCategorias();
+            ChangeButtonState(sender);
             OpenChildForm(childForm);
         }
-
         private void buttonSalir_Click(object sender, EventArgs e) { Close(); }
 
         // Metodo para abrir los formularios hijos
@@ -52,6 +57,20 @@ namespace ArticulosAppViews
 
             childForm.Show();
         }
-
+        private void ActivateButton(object btnSender)
+        {
+            activeButton = (Button)btnSender;
+            activeButton.BackColor = Color.FromArgb(69, 69, 69);
+        }
+        private void DeactivateButton()
+        {
+            activeButton.BackColor = Color.FromArgb(30, 30, 30);
+            activeButton = null;
+        }
+        private void ChangeButtonState(object sender)
+        {
+            if (activeButton != null) DeactivateButton();
+            ActivateButton(sender);
+        }
     }
 }

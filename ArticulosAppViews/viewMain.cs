@@ -47,7 +47,9 @@ namespace ArticulosAppViews
 
             activeChildForm = childForm;
 
-            labelWindowTitle.Text = childForm.Text;
+
+            labelWindowTitle.Text = childForm.Text.ToUpper();
+
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;

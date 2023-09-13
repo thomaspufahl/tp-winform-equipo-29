@@ -28,199 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblDetalles = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelDetails = new System.Windows.Forms.Panel();
+            this.flowLayoutPanelGestor = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonModificar = new System.Windows.Forms.Button();
+            this.buttonNuevo = new System.Windows.Forms.Button();
+            this.comboBoxFiltrar = new System.Windows.Forms.ComboBox();
+            this.buttonFiltrar = new System.Windows.Forms.Button();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.dataGridViewArticulos = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanelGestor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // panelDetails
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 85);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(481, 366);
-            this.dataGridView1.TabIndex = 1;
+            this.panelDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.panelDetails.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelDetails.Location = new System.Drawing.Point(708, 0);
+            this.panelDetails.Name = "panelDetails";
+            this.panelDetails.Size = new System.Drawing.Size(300, 537);
+            this.panelDetails.TabIndex = 0;
             // 
-            // panel2
+            // flowLayoutPanelGestor
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblDetalles);
-            this.panel2.Location = new System.Drawing.Point(494, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(515, 87);
-            this.panel2.TabIndex = 3;
+            this.flowLayoutPanelGestor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.flowLayoutPanelGestor.Controls.Add(this.buttonBuscar);
+            this.flowLayoutPanelGestor.Controls.Add(this.textBoxBuscar);
+            this.flowLayoutPanelGestor.Controls.Add(this.buttonFiltrar);
+            this.flowLayoutPanelGestor.Controls.Add(this.comboBoxFiltrar);
+            this.flowLayoutPanelGestor.Controls.Add(this.buttonNuevo);
+            this.flowLayoutPanelGestor.Controls.Add(this.buttonModificar);
+            this.flowLayoutPanelGestor.Controls.Add(this.buttonEliminar);
+            this.flowLayoutPanelGestor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanelGestor.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelGestor.Name = "flowLayoutPanelGestor";
+            this.flowLayoutPanelGestor.Padding = new System.Windows.Forms.Padding(9, 25, 0, 0);
+            this.flowLayoutPanelGestor.Size = new System.Drawing.Size(708, 108);
+            this.flowLayoutPanelGestor.TabIndex = 0;
             // 
-            // lblDetalles
+            // buttonEliminar
             // 
-            this.lblDetalles.AutoSize = true;
-            this.lblDetalles.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalles.ForeColor = System.Drawing.Color.White;
-            this.lblDetalles.Location = new System.Drawing.Point(205, 29);
-            this.lblDetalles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDetalles.Name = "lblDetalles";
-            this.lblDetalles.Size = new System.Drawing.Size(107, 25);
-            this.lblDetalles.TabIndex = 1;
-            this.lblDetalles.Text = "Detalles";
+            this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonEliminar.FlatAppearance.BorderSize = 0;
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar.ForeColor = System.Drawing.Color.White;
+            this.buttonEliminar.Location = new System.Drawing.Point(358, 57);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(167, 23);
+            this.buttonEliminar.TabIndex = 6;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
             // 
-            // btnAgregar
+            // buttonModificar
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregar.BackColor = System.Drawing.Color.LightCyan;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Font = new System.Drawing.Font("LG Display-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(19, 462);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(121, 54);
-            this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonModificar.FlatAppearance.BorderSize = 0;
+            this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModificar.ForeColor = System.Drawing.Color.White;
+            this.buttonModificar.Location = new System.Drawing.Point(185, 57);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(167, 23);
+            this.buttonModificar.TabIndex = 5;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.UseVisualStyleBackColor = false;
             // 
-            // btnEliminar
+            // buttonNuevo
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackColor = System.Drawing.Color.LightCyan;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("LG Display-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(362, 462);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(127, 54);
-            this.btnEliminar.TabIndex = 9;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.buttonNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.buttonNuevo.FlatAppearance.BorderSize = 0;
+            this.buttonNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNuevo.ForeColor = System.Drawing.Color.White;
+            this.buttonNuevo.Location = new System.Drawing.Point(12, 57);
+            this.buttonNuevo.Name = "buttonNuevo";
+            this.buttonNuevo.Size = new System.Drawing.Size(167, 23);
+            this.buttonNuevo.TabIndex = 4;
+            this.buttonNuevo.Text = "Nuevo";
+            this.buttonNuevo.UseVisualStyleBackColor = false;
             // 
-            // btnModificar
+            // comboBoxFiltrar
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnModificar.BackColor = System.Drawing.Color.LightCyan;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("LG Display-Regular", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(188, 462);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(124, 54);
-            this.btnModificar.TabIndex = 10;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.flowLayoutPanelGestor.SetFlowBreak(this.comboBoxFiltrar, true);
+            this.comboBoxFiltrar.FormattingEnabled = true;
+            this.comboBoxFiltrar.Location = new System.Drawing.Point(531, 28);
+            this.comboBoxFiltrar.Name = "comboBoxFiltrar";
+            this.comboBoxFiltrar.Size = new System.Drawing.Size(167, 22);
+            this.comboBoxFiltrar.TabIndex = 3;
             // 
-            // comboBox1
+            // buttonFiltrar
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 48);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 22);
-            this.comboBox1.TabIndex = 7;
+            this.buttonFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonFiltrar.FlatAppearance.BorderSize = 0;
+            this.buttonFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFiltrar.ForeColor = System.Drawing.Color.White;
+            this.buttonFiltrar.Location = new System.Drawing.Point(450, 28);
+            this.buttonFiltrar.Name = "buttonFiltrar";
+            this.buttonFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonFiltrar.TabIndex = 2;
+            this.buttonFiltrar.Text = "Filtrar";
+            this.buttonFiltrar.UseVisualStyleBackColor = false;
             // 
-            // btnBuscar
+            // textBoxBuscar
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnBuscar.Location = new System.Drawing.Point(12, 15);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(82, 25);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.textBoxBuscar.Location = new System.Drawing.Point(93, 28);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(351, 22);
+            this.textBoxBuscar.TabIndex = 1;
             // 
-            // btnFiltrar
+            // buttonBuscar
             // 
-            this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnFiltrar.Location = new System.Drawing.Point(12, 46);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(82, 25);
-            this.btnFiltrar.TabIndex = 12;
-            this.btnFiltrar.Text = "Filtrar por";
-            this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonBuscar.FlatAppearance.BorderSize = 0;
+            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar.ForeColor = System.Drawing.Color.White;
+            this.buttonBuscar.Location = new System.Drawing.Point(12, 28);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.TabIndex = 0;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // dataGridViewArticulos
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.Location = new System.Drawing.Point(101, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(390, 22);
-            this.textBox1.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.btnFiltrar);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(494, 87);
-            this.panel1.TabIndex = 4;
+            this.dataGridViewArticulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dataGridViewArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewArticulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewArticulos.Location = new System.Drawing.Point(0, 108);
+            this.dataGridViewArticulos.Name = "dataGridViewArticulos";
+            this.dataGridViewArticulos.Size = new System.Drawing.Size(708, 429);
+            this.dataGridViewArticulos.TabIndex = 1;
             // 
             // viewArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.ClientSize = new System.Drawing.Size(1008, 537);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewArticulos);
+            this.Controls.Add(this.flowLayoutPanelGestor);
+            this.Controls.Add(this.panelDetails);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "viewArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "viewArticulos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "Articulos";
+            this.SizeChanged += new System.EventHandler(this.viewArticulos_SizeChanged);
+            this.flowLayoutPanelGestor.ResumeLayout(false);
+            this.flowLayoutPanelGestor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblDetalles;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
+
+        private System.Windows.Forms.Panel panelDetails;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelGestor;
+        private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.TextBox textBoxBuscar;
+        private System.Windows.Forms.Button buttonFiltrar;
+        private System.Windows.Forms.ComboBox comboBoxFiltrar;
+        private System.Windows.Forms.Button buttonNuevo;
+        private System.Windows.Forms.Button buttonModificar;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.DataGridView dataGridViewArticulos;
     }
 }

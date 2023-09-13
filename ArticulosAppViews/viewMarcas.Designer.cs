@@ -85,7 +85,7 @@
             // 
             this.textBoxBuscar.Location = new System.Drawing.Point(93, 28);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(446, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(432, 22);
             this.textBoxBuscar.TabIndex = 1;
             // 
             // buttonFiltrar
@@ -94,7 +94,7 @@
             this.buttonFiltrar.FlatAppearance.BorderSize = 0;
             this.buttonFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFiltrar.ForeColor = System.Drawing.Color.White;
-            this.buttonFiltrar.Location = new System.Drawing.Point(545, 28);
+            this.buttonFiltrar.Location = new System.Drawing.Point(531, 28);
             this.buttonFiltrar.Name = "buttonFiltrar";
             this.buttonFiltrar.Size = new System.Drawing.Size(75, 23);
             this.buttonFiltrar.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.flowLayoutPanelGestor.SetFlowBreak(this.comboBoxFiltrar, true);
             this.comboBoxFiltrar.FormattingEnabled = true;
-            this.comboBoxFiltrar.Location = new System.Drawing.Point(626, 28);
+            this.comboBoxFiltrar.Location = new System.Drawing.Point(612, 28);
             this.comboBoxFiltrar.Name = "comboBoxFiltrar";
             this.comboBoxFiltrar.Size = new System.Drawing.Size(174, 22);
             this.comboBoxFiltrar.TabIndex = 3;

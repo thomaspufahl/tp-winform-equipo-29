@@ -62,13 +62,13 @@
             // labelLogo
             // 
             this.labelLogo.AutoSize = true;
-            this.labelLogo.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.labelLogo.Location = new System.Drawing.Point(25, 29);
+            this.labelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(255)))));
+            this.labelLogo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.ForeColor = System.Drawing.Color.White;
+            this.labelLogo.Location = new System.Drawing.Point(22, 29);
             this.labelLogo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(150, 25);
+            this.labelLogo.Size = new System.Drawing.Size(193, 29);
             this.labelLogo.TabIndex = 0;
             this.labelLogo.Text = "Artículos App";
             this.labelLogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,7 +97,7 @@
             this.buttonCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCategorias.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCategorias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonCategorias.Location = new System.Drawing.Point(0, 292);
+            this.buttonCategorias.Location = new System.Drawing.Point(0, 339);
             this.buttonCategorias.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonCategorias.Name = "buttonCategorias";
             this.buttonCategorias.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -114,7 +114,7 @@
             this.buttonMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMarcas.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonMarcas.Location = new System.Drawing.Point(0, 220);
+            this.buttonMarcas.Location = new System.Drawing.Point(0, 267);
             this.buttonMarcas.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonMarcas.Name = "buttonMarcas";
             this.buttonMarcas.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -131,7 +131,7 @@
             this.buttonArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonArticulos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonArticulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-            this.buttonArticulos.Location = new System.Drawing.Point(0, 146);
+            this.buttonArticulos.Location = new System.Drawing.Point(0, 193);
             this.buttonArticulos.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.buttonArticulos.Name = "buttonArticulos";
             this.buttonArticulos.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
@@ -144,7 +144,7 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.Transparent;
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(255)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -162,36 +162,37 @@
             this.panelWindowTitle.Location = new System.Drawing.Point(240, 0);
             this.panelWindowTitle.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.panelWindowTitle.Name = "panelWindowTitle";
-            this.panelWindowTitle.Size = new System.Drawing.Size(896, 85);
+            this.panelWindowTitle.Size = new System.Drawing.Size(1024, 85);
             this.panelWindowTitle.TabIndex = 1;
             // 
             // labelWindowTitle
             // 
             this.labelWindowTitle.AutoSize = true;
-            this.labelWindowTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWindowTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWindowTitle.ForeColor = System.Drawing.Color.White;
             this.labelWindowTitle.Location = new System.Drawing.Point(25, 29);
             this.labelWindowTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWindowTitle.Name = "labelWindowTitle";
-            this.labelWindowTitle.Size = new System.Drawing.Size(76, 25);
+            this.labelWindowTitle.Size = new System.Drawing.Size(82, 25);
             this.labelWindowTitle.TabIndex = 0;
             this.labelWindowTitle.Text = "HOME";
             this.labelWindowTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelWindows
             // 
+            this.panelWindows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.panelWindows.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelWindows.Location = new System.Drawing.Point(240, 85);
             this.panelWindows.Name = "panelWindows";
-            this.panelWindows.Size = new System.Drawing.Size(896, 524);
+            this.panelWindows.Size = new System.Drawing.Size(1024, 524);
             this.panelWindows.TabIndex = 3;
             // 
             // viewMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1136, 609);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1264, 609);
             this.Controls.Add(this.panelWindows);
             this.Controls.Add(this.panelWindowTitle);
             this.Controls.Add(this.panelMenu);
@@ -199,7 +200,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.MinimumSize = new System.Drawing.Size(1152, 648);
+            this.MinimumSize = new System.Drawing.Size(1280, 648);
             this.Name = "viewMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

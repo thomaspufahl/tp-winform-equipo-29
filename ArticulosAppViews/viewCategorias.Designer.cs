@@ -36,7 +36,9 @@
             this.buttonNuevo = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.dataGridViewCategorias = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanelGestor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelGestor
@@ -73,7 +75,7 @@
             // 
             this.textBoxBuscar.Location = new System.Drawing.Point(93, 28);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(446, 22);
+            this.textBoxBuscar.Size = new System.Drawing.Size(432, 22);
             this.textBoxBuscar.TabIndex = 1;
             // 
             // buttonFiltrar
@@ -82,7 +84,7 @@
             this.buttonFiltrar.FlatAppearance.BorderSize = 0;
             this.buttonFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFiltrar.ForeColor = System.Drawing.Color.White;
-            this.buttonFiltrar.Location = new System.Drawing.Point(545, 28);
+            this.buttonFiltrar.Location = new System.Drawing.Point(531, 28);
             this.buttonFiltrar.Name = "buttonFiltrar";
             this.buttonFiltrar.Size = new System.Drawing.Size(75, 23);
             this.buttonFiltrar.TabIndex = 2;
@@ -93,7 +95,7 @@
             // 
             this.flowLayoutPanelGestor.SetFlowBreak(this.comboBoxFiltrar, true);
             this.comboBoxFiltrar.FormattingEnabled = true;
-            this.comboBoxFiltrar.Location = new System.Drawing.Point(626, 28);
+            this.comboBoxFiltrar.Location = new System.Drawing.Point(612, 28);
             this.comboBoxFiltrar.Name = "comboBoxFiltrar";
             this.comboBoxFiltrar.Size = new System.Drawing.Size(174, 22);
             this.comboBoxFiltrar.TabIndex = 3;
@@ -138,12 +140,24 @@
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
             // 
+            // dataGridViewCategorias
+            // 
+            this.dataGridViewCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dataGridViewCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewCategorias.Location = new System.Drawing.Point(0, 108);
+            this.dataGridViewCategorias.Name = "dataGridViewCategorias";
+            this.dataGridViewCategorias.Size = new System.Drawing.Size(1008, 429);
+            this.dataGridViewCategorias.TabIndex = 5;
+            // 
             // viewCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.Controls.Add(this.dataGridViewCategorias);
             this.Controls.Add(this.flowLayoutPanelGestor);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -153,6 +167,7 @@
             this.Text = "Categorias";
             this.flowLayoutPanelGestor.ResumeLayout(false);
             this.flowLayoutPanelGestor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +182,6 @@
         private System.Windows.Forms.Button buttonNuevo;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.DataGridView dataGridViewCategorias;
     }
 }

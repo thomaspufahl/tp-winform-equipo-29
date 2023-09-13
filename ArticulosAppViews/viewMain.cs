@@ -65,6 +65,7 @@ namespace ArticulosAppViews
         private void DeactivateButton()
         {
             activeButton.BackColor = Color.FromArgb(30, 30, 30);
+
             activeButton = null;
         }
         private void ChangeButtonState(object sender)

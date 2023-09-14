@@ -47,11 +47,13 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblCancelar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAgregarArticulo
@@ -71,6 +73,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblAgregarArticulo);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-1, -5);
@@ -168,35 +171,35 @@
             this.numericUpDown1.Location = new System.Drawing.Point(118, 86);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(139, 21);
-            this.numericUpDown1.TabIndex = 9;
+            this.numericUpDown1.TabIndex = 0;
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(118, 256);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(139, 21);
-            this.numericUpDown2.TabIndex = 10;
+            this.numericUpDown2.TabIndex = 3;
             // 
             // numericUpDown3
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(137, 286);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 21);
-            this.numericUpDown3.TabIndex = 11;
+            this.numericUpDown3.TabIndex = 4;
             // 
             // numericUpDown4
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(92, 352);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(165, 21);
-            this.numericUpDown4.TabIndex = 12;
+            this.numericUpDown4.TabIndex = 6;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(110, 125);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(241, 21);
-            this.textBox1.TabIndex = 13;
+            this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
@@ -204,21 +207,21 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(462, 73);
-            this.textBox2.TabIndex = 14;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(129, 319);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(363, 21);
-            this.textBox3.TabIndex = 15;
+            this.textBox3.TabIndex = 5;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(92, 418);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
@@ -227,7 +230,7 @@
             this.lblCancelar.Location = new System.Drawing.Point(372, 418);
             this.lblCancelar.Name = "lblCancelar";
             this.lblCancelar.Size = new System.Drawing.Size(75, 23);
-            this.lblCancelar.TabIndex = 17;
+            this.lblCancelar.TabIndex = 8;
             this.lblCancelar.Text = "Cancelar";
             this.lblCancelar.UseVisualStyleBackColor = true;
             // 
@@ -242,6 +245,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(555, 17);
             this.panel3.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // viewAgregarArticulo
             // 
@@ -279,6 +295,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +322,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button lblCancelar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

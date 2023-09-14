@@ -30,7 +30,6 @@
         {
             this.lblAgregarArticulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.lblCancelar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -60,37 +58,26 @@
             // 
             this.lblAgregarArticulo.AutoSize = true;
             this.lblAgregarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblAgregarArticulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarArticulo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblAgregarArticulo.ForeColor = System.Drawing.Color.White;
-            this.lblAgregarArticulo.Location = new System.Drawing.Point(15, 2);
+            this.lblAgregarArticulo.Location = new System.Drawing.Point(165, 27);
             this.lblAgregarArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgregarArticulo.Name = "lblAgregarArticulo";
-            this.lblAgregarArticulo.Size = new System.Drawing.Size(151, 18);
+            this.lblAgregarArticulo.Size = new System.Drawing.Size(251, 25);
             this.lblAgregarArticulo.TabIndex = 0;
-            this.lblAgregarArticulo.Text = "Agregar Articulo";
+            this.lblAgregarArticulo.Text = "AGREGAR ARTICULO";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.lblAgregarArticulo);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-1, -5);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 74);
             this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblAgregarArticulo);
-            this.panel2.Location = new System.Drawing.Point(186, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(172, 24);
-            this.panel2.TabIndex = 1;
             // 
             // lblCodigo
             // 
@@ -192,7 +179,7 @@
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(137, 288);
+            this.numericUpDown3.Location = new System.Drawing.Point(137, 286);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 21);
             this.numericUpDown3.TabIndex = 11;
@@ -247,8 +234,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.ForeColor = System.Drawing.Color.Transparent;
             this.panel3.Location = new System.Drawing.Point(-1, 388);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
@@ -286,8 +274,7 @@
             this.Name = "viewAgregarArticulo";
             this.Text = "viewAgregarArticulo";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -301,7 +288,6 @@
 
         private System.Windows.Forms.Label lblAgregarArticulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;

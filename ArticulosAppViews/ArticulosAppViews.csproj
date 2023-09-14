@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="viewAgregarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewAgregarArticulo.Designer.cs">
+      <DependentUpon>viewAgregarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="viewAgregarArticulo.resx">
+      <DependentUpon>viewAgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewArticulos.resx">
       <DependentUpon>viewArticulos.cs</DependentUpon>
     </EmbeddedResource>

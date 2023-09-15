@@ -67,6 +67,7 @@
             this.btnCancelar.TabIndex = 53;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -180,6 +181,7 @@
             this.MaximumSize = new System.Drawing.Size(566, 504);
             this.MinimumSize = new System.Drawing.Size(566, 504);
             this.Name = "viewEliminarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "viewEliminarArticulo";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);

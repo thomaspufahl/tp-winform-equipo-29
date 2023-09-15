@@ -253,6 +253,7 @@
             this.lblCancelar.TabIndex = 49;
             this.lblCancelar.Text = "Cancelar";
             this.lblCancelar.UseVisualStyleBackColor = false;
+            this.lblCancelar.Click += new System.EventHandler(this.lblCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -296,6 +297,7 @@
             this.MaximumSize = new System.Drawing.Size(566, 504);
             this.MinimumSize = new System.Drawing.Size(566, 504);
             this.Name = "viewAgregarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "viewAgregarArticulo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -17,6 +17,9 @@ namespace ArticulosAppViews
             InitializeComponent();
         }
 
-        
+        private void lblCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

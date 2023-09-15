@@ -16,5 +16,15 @@ namespace ArticulosAppViews
         {
             InitializeComponent();
         }
+
+        public static implicit operator viewModificarArticulo(viewAgregarArticulo v)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

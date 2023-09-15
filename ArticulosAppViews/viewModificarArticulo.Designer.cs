@@ -80,6 +80,7 @@
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -296,7 +297,9 @@
             this.MaximumSize = new System.Drawing.Size(566, 504);
             this.MinimumSize = new System.Drawing.Size(566, 504);
             this.Name = "viewModificarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "viewModificarArticulo";
+            this.TransparencyKey = System.Drawing.Color.Wheat;
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();

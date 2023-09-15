@@ -34,10 +34,10 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblEliminarArticulo = new System.Windows.Forms.Label();
             this.lblAdvertencia = new System.Windows.Forms.Label();
             this.lblAdvertencia2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,6 +81,7 @@
             this.btnAceptar.TabIndex = 52;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // numericUpDown1
             // 
@@ -113,19 +114,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 74);
             this.panel1.TabIndex = 37;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lblEliminarArticulo
             // 
@@ -161,6 +149,19 @@
             this.lblAdvertencia2.Size = new System.Drawing.Size(360, 18);
             this.lblAdvertencia2.TabIndex = 55;
             this.lblAdvertencia2.Text = "mismo no se podra recuperar en un futuro.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // viewEliminarArticulo
             // 

@@ -21,5 +21,11 @@ namespace ArticulosAppViews
         {
             Close();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            viewAdvertencia ventana = new viewAdvertencia();
+            ventana.ShowDialog();
+        }
     }
 }

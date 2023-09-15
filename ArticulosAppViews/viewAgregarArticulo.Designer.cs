@@ -45,9 +45,9 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.PbxFormulario = new System.Windows.Forms.PictureBox();
             this.lblCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.PbxFormulario = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -228,19 +228,6 @@
             this.lblCodigo.TabIndex = 36;
             this.lblCodigo.Text = "Codigo ";
             // 
-            // PbxFormulario
-            // 
-            this.PbxFormulario.BackColor = System.Drawing.Color.Transparent;
-            this.PbxFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbxFormulario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PbxFormulario.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
-            this.PbxFormulario.Location = new System.Drawing.Point(22, 16);
-            this.PbxFormulario.Name = "PbxFormulario";
-            this.PbxFormulario.Size = new System.Drawing.Size(100, 50);
-            this.PbxFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxFormulario.TabIndex = 1;
-            this.PbxFormulario.TabStop = false;
-            // 
             // lblCancelar
             // 
             this.lblCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
@@ -267,6 +254,20 @@
             this.btnAceptar.TabIndex = 48;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // PbxFormulario
+            // 
+            this.PbxFormulario.BackColor = System.Drawing.Color.Transparent;
+            this.PbxFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PbxFormulario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PbxFormulario.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
+            this.PbxFormulario.Location = new System.Drawing.Point(22, 16);
+            this.PbxFormulario.Name = "PbxFormulario";
+            this.PbxFormulario.Size = new System.Drawing.Size(100, 50);
+            this.PbxFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxFormulario.TabIndex = 1;
+            this.PbxFormulario.TabStop = false;
             // 
             // viewAgregarArticulo
             // 

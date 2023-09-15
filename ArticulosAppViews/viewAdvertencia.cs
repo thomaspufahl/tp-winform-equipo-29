@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace ArticulosAppViews
 {
-    public partial class viewEliminarArticulo : Form
+    public partial class viewAdvertencia : Form
     {
-        public viewEliminarArticulo()
+        public viewAdvertencia()
         {
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void butonCancelar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            viewAdvertencia ventana = new viewAdvertencia();
-            ventana.ShowDialog();
         }
     }
 }

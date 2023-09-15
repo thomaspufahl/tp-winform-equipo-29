@@ -29,14 +29,19 @@ namespace ArticulosAppViews
 
             if (width >= 1280)
             {
-                panelDetails.Size = bigSize;
+                
                 textBoxBuscar.Size = textBoxBigSize;
             }
             else
             {
-                panelDetails.Size = smallSize;
+               
                 textBoxBuscar.Size = textBoxSmallSize;
             }
+        }
+
+        private void buttonNuevo_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

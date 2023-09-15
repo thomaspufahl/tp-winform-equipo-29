@@ -58,6 +58,12 @@
     <Compile Include="viewAgregarArticulo.Designer.cs">
       <DependentUpon>viewAgregarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewAgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewAgregarCategoria.Designer.cs">
+      <DependentUpon>viewAgregarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewAgregarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewAgregarArticulo.resx">
       <DependentUpon>viewAgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewAgregarCategoria.resx">
+      <DependentUpon>viewAgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewAgregarMarca.resx">
       <DependentUpon>viewAgregarMarca.cs</DependentUpon>

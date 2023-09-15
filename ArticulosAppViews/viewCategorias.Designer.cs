@@ -112,6 +112,7 @@
             this.buttonNuevo.TabIndex = 0;
             this.buttonNuevo.Text = "Nuevo";
             this.buttonNuevo.UseVisualStyleBackColor = false;
+            this.buttonNuevo.Click += new System.EventHandler(this.buttonNuevo_Click);
             // 
             // buttonModificar
             // 

@@ -10,17 +10,23 @@ using System.Windows.Forms;
 
 namespace ArticulosAppViews
 {
-    public partial class viewCategorias : Form
+    public partial class viewAgregarCategoria : Form
     {
-        public viewCategorias()
+        public viewAgregarCategoria()
         {
             InitializeComponent();
         }
 
-        private void buttonNuevo_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-            viewAgregarCategoria ventana = new viewAgregarCategoria();
+            viewAdvertencia ventana = new viewAdvertencia();
             ventana.ShowDialog();
+
+        }
+
+        private void lblCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

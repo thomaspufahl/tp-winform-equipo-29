@@ -28,5 +28,11 @@ namespace ArticulosAppViews
             viewModificarMarca ventana = new viewModificarMarca();
             ventana.ShowDialog();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            viewEliminarMarca ventana = new viewEliminarMarca();
+            ventana.ShowDialog();
+        }
     }
 }

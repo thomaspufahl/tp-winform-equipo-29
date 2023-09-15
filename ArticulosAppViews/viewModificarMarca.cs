@@ -10,23 +10,22 @@ using System.Windows.Forms;
 
 namespace ArticulosAppViews
 {
-    public partial class viewMarcas : Form
+    public partial class viewModificarMarca : Form
     {
-        public viewMarcas()
+        public viewModificarMarca()
         {
             InitializeComponent();
         }
 
-        private void buttonNuevo_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-            viewAgregarMarca ventana = new viewAgregarMarca();
+            viewAdvertencia ventana = new viewAdvertencia();
             ventana.ShowDialog();
         }
 
-        private void buttonModificar_Click(object sender, EventArgs e)
+        private void lblCancelar_Click(object sender, EventArgs e)
         {
-            viewModificarMarca ventana = new viewModificarMarca();
-            ventana.ShowDialog();
+            Close();
         }
     }
 }

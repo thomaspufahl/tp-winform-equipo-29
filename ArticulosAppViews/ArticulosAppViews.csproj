@@ -102,6 +102,12 @@
     <Compile Include="viewModificarArticulo.Designer.cs">
       <DependentUpon>viewModificarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewModificarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewModificarMarca.Designer.cs">
+      <DependentUpon>viewModificarMarca.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewModificarArticulo.resx">
       <DependentUpon>viewModificarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewModificarMarca.resx">
+      <DependentUpon>viewModificarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

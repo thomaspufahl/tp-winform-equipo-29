@@ -11,12 +11,11 @@ namespace ArticulosAppModels
         public int Id { get; }
         public string Description { get; set; }
 
-        public Categoria()
+        public Categoria() { }
+        public Categoria(string description)
         {
-            Id = -1;
-            Description = string.Empty;
+            Description = description;
         }
-
         public Categoria(int id, string description)
         {
             Id = id;

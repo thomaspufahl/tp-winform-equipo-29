@@ -12,6 +12,8 @@ namespace ArticulosAppViews
 {
     public partial class viewMarcas : Form
     {
+        private List<Marca> Marcas = null;
+
         public viewMarcas()
         {
             InitializeComponent();
@@ -33,6 +35,25 @@ namespace ArticulosAppViews
         {
             viewEliminarMarca ventana = new viewEliminarMarca();
             ventana.ShowDialog();
+        }
+        private void LoadDb()
+        {
+            MarcaService service = new MarcaService();
+
+            try
+            {
+                Marcas = service.GetAll();
+
+                dataGridViewMarcas.DataSource = Marcas;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void viewMarcas_Load(object sender, EventArgs e)
+        {
+            LoadDb();
         }
     }
 }

@@ -104,5 +104,36 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public Categoria GetById(int idCategoria)
+        {
+            int id;
+            string descripcion;
+
+            try
+            {
+                db.setQuery($"SELECT C.Id AS Id, C.Descripcion AS Descripcion FROM CATEGORIAS C WHERE C.Id = {idCategoria}");
+
+                db.executeSelectionQuery();
+
+                if (db.Reader.Read())
+                {
+                    id = (int)db.Reader["Id"];
+                    descripcion = (string)db.Reader["Descripcion"];
+
+                    return new Categoria(id, descripcion);
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener una categoria de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

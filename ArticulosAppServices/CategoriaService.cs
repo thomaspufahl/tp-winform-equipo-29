@@ -85,5 +85,24 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                db.setQuery("DELETE FROM CATEGORIAS WHERE Id = @id");
+                db.setParams("@id", id);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar una categoria de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

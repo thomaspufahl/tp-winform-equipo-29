@@ -10,34 +10,40 @@ namespace ArticulosAppModels
 {
     public class Articulo
     {
-        public int CodigoArticulo { get; }
-        public string NombreArticulo { get; set; }
+        public int Id { get; }
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public Marca Marca { get; set; }
-        public Categoria Categoria { get; set; }
-        public Imagen Imagen { get; set; }
-        public float Precio { get; set; }
+        public int IdMarca { get; set; }
+        public int IdCategoria { get; set; }
+        public decimal Precio { get; set; }
 
-        public Articulo()
+        public Articulo() {}
+
+        public Articulo(string codigo, string nombre, string descripcion, int idMarca, int idCategoria, decimal precio)
         {
-            CodigoArticulo = -1;
-            NombreArticulo = string.Empty;
-            Descripcion = string.Empty;
-            Marca = new Marca();
-            Categoria = new Categoria();
-            Imagen = new Imagen();
-            Precio = 0;
-        }
-        public Articulo(int id, string nombre, string descripcion, Categoria categoria, float precio)
-        {
-            CodigoArticulo = id;
-            NombreArticulo = nombre;
+            Codigo = codigo;
+            Nombre = nombre;
             Descripcion = descripcion;
-            Marca = new Marca();
-            Categoria = categoria;
-            Imagen = new Imagen();
+            IdMarca = idMarca;
+            IdCategoria = idCategoria;
             Precio = precio;
         }
 
+        public Articulo(int id, string codigo, string nombre, string descripcion, int idMarca, int idCategoria, decimal precio)
+        {
+            Id = id;
+            Codigo = codigo;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            IdMarca = idMarca;
+            IdCategoria = idCategoria;
+            Precio = precio;
+        }
+
+        public override string ToString()
+        {
+            return $"{Codigo} - {Nombre}";
+        }
     }
 }

@@ -70,6 +70,7 @@ namespace ArticulosAppServices
             {
                 db.setQuery("UPDATE MARCAS SET Descripcion = @Descripcion WHERE Id = @Id");
                 db.setParams("@Descripcion", marca.Description);
+                db.setParams("@Id", marca.Id);
 
                 db.executeActionQuery();
             }

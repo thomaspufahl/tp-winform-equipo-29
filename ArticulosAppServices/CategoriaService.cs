@@ -45,9 +45,8 @@ namespace ArticulosAppServices
             {
                 db.closeConnection();
             }
-
-
         }
+
         public void Add(Categoria categoria)
         {
             try
@@ -67,5 +66,24 @@ namespace ArticulosAppServices
             }
         }
 
+        public void Update(Categoria categoria)
+        {
+            try
+            {
+                db.setQuery("UPDATE CATEGORIAS SET Descripcion = @descripcion WHERE Id = @id");
+                db.setParams("@descripcion", categoria.Description);
+                db.setParams("@id", categoria.Id);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar una categoria en la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

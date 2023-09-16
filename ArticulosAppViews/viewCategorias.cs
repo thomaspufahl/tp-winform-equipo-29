@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ArticulosAppModels;
+using ArticulosAppServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace ArticulosAppViews
 {
     public partial class viewCategorias : Form
     {
+        private List<Categoria> Categorias = null;
+        
         public viewCategorias()
         {
             InitializeComponent();
@@ -33,6 +37,27 @@ namespace ArticulosAppViews
         {
             viewEliminarCategoria ventana = new viewEliminarCategoria();
             ventana.ShowDialog();
+        }
+
+        private void loadDb()
+        {
+            CategoriaService service = new CategoriaService();
+
+            try
+            {
+                Categorias = service.GetAll();
+
+                dataGridViewCategorias.DataSource = Categorias;
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void viewCategorias_Load(object sender, EventArgs e)
+        {
+            loadDb();
         }
     }
 }

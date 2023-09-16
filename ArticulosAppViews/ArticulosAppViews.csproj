@@ -200,5 +200,15 @@
   <ItemGroup>
     <None Include="Resources\pngwing.com %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArticulosAppModels\ArticulosAppModels.csproj">
+      <Project>{d0ce076a-2ab9-493c-a83c-c119956e3508}</Project>
+      <Name>ArticulosAppModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ArticulosAppServices\ArticulosAppServices.csproj">
+      <Project>{625b2d79-91cb-445c-a284-5d85a77d6609}</Project>
+      <Name>ArticulosAppServices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

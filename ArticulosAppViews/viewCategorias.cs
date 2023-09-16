@@ -22,5 +22,17 @@ namespace ArticulosAppViews
             viewAgregarCategoria ventana = new viewAgregarCategoria();
             ventana.ShowDialog();
         }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            viewModificarCategoria ventana = new viewModificarCategoria();
+            ventana.ShowDialog();
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            viewEliminarCategoria ventana = new viewEliminarCategoria();
+            ventana.ShowDialog();
+        }
     }
 }

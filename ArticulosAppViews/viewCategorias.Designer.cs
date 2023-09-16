@@ -127,6 +127,7 @@
             this.buttonModificar.TabIndex = 1;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonEliminar
             // 
@@ -140,6 +141,7 @@
             this.buttonEliminar.TabIndex = 2;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // dataGridViewCategorias
             // 

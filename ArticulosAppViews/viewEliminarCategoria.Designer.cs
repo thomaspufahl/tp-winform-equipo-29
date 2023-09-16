@@ -1,6 +1,6 @@
 ﻿namespace ArticulosAppViews
 {
-    partial class viewAgregarCategoria
+    partial class viewEliminarCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.lblCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblIdCategoria = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAgregarCategoria = new System.Windows.Forms.Label();
+            this.lblEliminarCategoria = new System.Windows.Forms.Label();
             this.PbxFormulario = new System.Windows.Forms.PictureBox();
+            this.lblAdvertencia2 = new System.Windows.Forms.Label();
+            this.lblAdvertencia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).BeginInit();
@@ -52,7 +52,7 @@
             this.lblCancelar.Location = new System.Drawing.Point(302, 357);
             this.lblCancelar.Name = "lblCancelar";
             this.lblCancelar.Size = new System.Drawing.Size(75, 23);
-            this.lblCancelar.TabIndex = 75;
+            this.lblCancelar.TabIndex = 83;
             this.lblCancelar.Text = "Cancelar";
             this.lblCancelar.UseVisualStyleBackColor = false;
             this.lblCancelar.Click += new System.EventHandler(this.lblCancelar_Click);
@@ -66,48 +66,28 @@
             this.btnAceptar.Location = new System.Drawing.Point(22, 357);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 74;
+            this.btnAceptar.TabIndex = 82;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(22, 223);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(333, 73);
-            this.textBox2.TabIndex = 72;
-            // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(198, 143);
+            this.numericUpDown1.Location = new System.Drawing.Point(198, 158);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(157, 20);
-            this.numericUpDown1.TabIndex = 70;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.lblDescripcion.Location = new System.Drawing.Point(19, 202);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(100, 18);
-            this.lblDescripcion.TabIndex = 73;
-            this.lblDescripcion.Text = "Descripcion";
+            this.numericUpDown1.TabIndex = 78;
             // 
             // lblIdCategoria
             // 
             this.lblIdCategoria.AutoSize = true;
             this.lblIdCategoria.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.lblIdCategoria.Location = new System.Drawing.Point(19, 143);
+            this.lblIdCategoria.Location = new System.Drawing.Point(19, 158);
             this.lblIdCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdCategoria.Name = "lblIdCategoria";
             this.lblIdCategoria.Size = new System.Drawing.Size(172, 18);
-            this.lblIdCategoria.TabIndex = 71;
+            this.lblIdCategoria.TabIndex = 79;
             this.lblIdCategoria.Text = "Codigo de Categoria";
             // 
             // panel3
@@ -120,34 +100,34 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(397, 17);
-            this.panel3.TabIndex = 69;
+            this.panel3.TabIndex = 77;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.PbxFormulario);
-            this.panel1.Controls.Add(this.lblAgregarCategoria);
+            this.panel1.Controls.Add(this.lblEliminarCategoria);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(397, 74);
-            this.panel1.TabIndex = 68;
+            this.panel1.TabIndex = 76;
             // 
-            // lblAgregarCategoria
+            // lblEliminarCategoria
             // 
-            this.lblAgregarCategoria.AutoSize = true;
-            this.lblAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblAgregarCategoria.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblAgregarCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblAgregarCategoria.Location = new System.Drawing.Point(24, 27);
-            this.lblAgregarCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAgregarCategoria.MaximumSize = new System.Drawing.Size(268, 25);
-            this.lblAgregarCategoria.Name = "lblAgregarCategoria";
-            this.lblAgregarCategoria.Size = new System.Drawing.Size(268, 25);
-            this.lblAgregarCategoria.TabIndex = 0;
-            this.lblAgregarCategoria.Text = "AGREGAR CATEGORIA";
+            this.lblEliminarCategoria.AutoSize = true;
+            this.lblEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblEliminarCategoria.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblEliminarCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblEliminarCategoria.Location = new System.Drawing.Point(24, 27);
+            this.lblEliminarCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEliminarCategoria.MaximumSize = new System.Drawing.Size(268, 25);
+            this.lblEliminarCategoria.Name = "lblEliminarCategoria";
+            this.lblEliminarCategoria.Size = new System.Drawing.Size(268, 25);
+            this.lblEliminarCategoria.TabIndex = 0;
+            this.lblEliminarCategoria.Text = "ELIMINAR CATEGORIA";
             // 
             // PbxFormulario
             // 
@@ -162,25 +142,47 @@
             this.PbxFormulario.TabIndex = 1;
             this.PbxFormulario.TabStop = false;
             // 
-            // viewAgregarCategoria
+            // lblAdvertencia2
+            // 
+            this.lblAdvertencia2.AutoSize = true;
+            this.lblAdvertencia2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdvertencia2.ForeColor = System.Drawing.Color.Red;
+            this.lblAdvertencia2.Location = new System.Drawing.Point(70, 249);
+            this.lblAdvertencia2.Name = "lblAdvertencia2";
+            this.lblAdvertencia2.Size = new System.Drawing.Size(278, 14);
+            this.lblAdvertencia2.TabIndex = 85;
+            this.lblAdvertencia2.Text = "mismo no se podra recuperar en un futuro.";
+            // 
+            // lblAdvertencia
+            // 
+            this.lblAdvertencia.AutoSize = true;
+            this.lblAdvertencia.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdvertencia.ForeColor = System.Drawing.Color.Red;
+            this.lblAdvertencia.Location = new System.Drawing.Point(-1, 231);
+            this.lblAdvertencia.Name = "lblAdvertencia";
+            this.lblAdvertencia.Size = new System.Drawing.Size(393, 14);
+            this.lblAdvertencia.TabIndex = 84;
+            this.lblAdvertencia.Text = "Advertencia: Cuidadoo, al eliminar una marca de la lista, este";
+            // 
+            // viewEliminarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(390, 396);
+            this.Controls.Add(this.lblAdvertencia2);
+            this.Controls.Add(this.lblAdvertencia);
             this.Controls.Add(this.lblCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblIdCategoria);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(406, 435);
             this.MinimumSize = new System.Drawing.Size(406, 435);
-            this.Name = "viewAgregarCategoria";
+            this.Name = "viewEliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "viewAgregarCategoria";
+            this.Text = "viewEliminarCategoria";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -194,13 +196,13 @@
 
         private System.Windows.Forms.Button lblCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblIdCategoria;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PbxFormulario;
-        private System.Windows.Forms.Label lblAgregarCategoria;
+        private System.Windows.Forms.Label lblEliminarCategoria;
+        private System.Windows.Forms.Label lblAdvertencia2;
+        private System.Windows.Forms.Label lblAdvertencia;
     }
 }

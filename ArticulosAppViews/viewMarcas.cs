@@ -30,8 +30,10 @@ namespace ArticulosAppViews
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            viewModificarMarca ventana = new viewModificarMarca();
+            Marca marca = (Marca)dataGridViewMarcas.CurrentRow.DataBoundItem;
+            viewAgregarMarca ventana = new viewAgregarMarca(marca);
             ventana.ShowDialog();
+            LoadDb();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

@@ -14,9 +14,18 @@ namespace ArticulosAppViews
 {
     public partial class viewAgregarMarca : Form
     {
+        Marca _marca = null;
         public viewAgregarMarca()
         {
             InitializeComponent();
+        }
+        public viewAgregarMarca(Marca marca)
+        {
+            InitializeComponent();
+
+            _marca = marca;
+            Text = "Modificar marca";
+            lblAgregarMarca.Text = "Modificar marca";
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -31,9 +40,17 @@ namespace ArticulosAppViews
 
             if (MessageResult == DialogResult.Yes)
             {
-                agregar();
-                MessageBox.Show("Categoría agregada correctamente");
-
+                if (_marca == null)
+                {
+                    agregar();
+                    MessageBox.Show("Marca agregada correctamente");
+                }
+                else
+                {
+                    modificar();
+                    MessageBox.Show("Marca actualizada correctamente");
+                }
+                
                 Close();
             }
             else
@@ -56,6 +73,20 @@ namespace ArticulosAppViews
             try
             {
                 service.Add(marca);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void modificar()
+        {
+            MarcaService service = new MarcaService();
+            Marca marca = new Marca(_marca.Id, textBoxDescripcion.Text);
+            try
+            {
+                service.Update(marca);
             }
             catch (Exception ex)
             {

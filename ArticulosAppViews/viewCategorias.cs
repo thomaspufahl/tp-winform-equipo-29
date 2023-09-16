@@ -81,5 +81,20 @@ namespace ArticulosAppViews
         {
             LoadDb();
         }
+
+        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            fastSearch();
+        }
+
+        private void fastSearch()
+        {
+            List<Categoria> list;
+
+            list = Categorias.FindAll(categoria => categoria.Description.ToLower().Contains(textBoxBuscar.Text.ToLower()));
+
+            dataGridViewCategorias.DataSource = null;
+            dataGridViewCategorias.DataSource = list;
+        }
     }
 }

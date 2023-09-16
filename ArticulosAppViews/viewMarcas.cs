@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ArticulosAppModels;
+using ArticulosAppServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +38,7 @@ namespace ArticulosAppViews
             viewEliminarMarca ventana = new viewEliminarMarca();
             ventana.ShowDialog();
         }
+
         private void LoadDb()
         {
             MarcaService service = new MarcaService();
@@ -51,9 +54,25 @@ namespace ArticulosAppViews
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void FastSearch()
+        {
+            List<Marca> list;
+
+            list = Marcas.FindAll(marca => marca.Description.ToLower().Contains(textBoxBuscar.Text.ToLower()));
+
+            dataGridViewMarcas.DataSource = null;
+            dataGridViewMarcas.DataSource = list;
+        }
+
         private void viewMarcas_Load(object sender, EventArgs e)
         {
             LoadDb();
+        }
+
+        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            FastSearch();
         }
     }
 }

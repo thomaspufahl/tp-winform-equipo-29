@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ArticulosAppModels;
+using ArticulosAppServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace ArticulosAppViews
 {
     public partial class viewArticulos : Form
     {
+        private List<Articulo> Articulos = null;
         public viewArticulos()
         {
             InitializeComponent();
@@ -43,7 +46,6 @@ namespace ArticulosAppViews
         {
             viewAgregarArticulo ventana = new viewAgregarArticulo();
             ventana.ShowDialog();
-
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
@@ -56,6 +58,27 @@ namespace ArticulosAppViews
         {
             viewEliminarArticulo ventana = new viewEliminarArticulo();
             ventana.ShowDialog();
+        }
+
+        private void loadDb()
+        {
+            ArticuloService service = new ArticuloService();
+
+            try
+            {
+                Articulos = service.GetAll();
+
+                dataGridViewArticulos.DataSource = Articulos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void flowLayoutPanelGestor_Paint(object sender, PaintEventArgs e)
+        {
+            loadDb();
         }
     }
 }

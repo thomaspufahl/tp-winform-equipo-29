@@ -25,6 +25,7 @@ namespace ArticulosAppViews
         {
             viewAgregarMarca ventana = new viewAgregarMarca();
             ventana.ShowDialog();
+            LoadDb();
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)

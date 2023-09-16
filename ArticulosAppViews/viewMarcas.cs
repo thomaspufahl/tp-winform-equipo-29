@@ -38,8 +38,22 @@ namespace ArticulosAppViews
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            viewEliminarMarca ventana = new viewEliminarMarca();
-            ventana.ShowDialog();
+            Marca marca = (Marca) dataGridViewMarcas.CurrentRow.DataBoundItem;
+
+            MarcaService service = new MarcaService();
+
+            DialogResult MessageResult = MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Eliminar marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (MessageResult == DialogResult.No) return;
+
+            try
+            {
+                service.Delete(marca.Id);
+                LoadDb();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void LoadDb()

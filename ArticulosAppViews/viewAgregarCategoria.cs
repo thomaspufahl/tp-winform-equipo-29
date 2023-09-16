@@ -14,9 +14,18 @@ namespace ArticulosAppViews
 {
     public partial class viewAgregarCategoria : Form
     {
+        private Categoria _categoria = null;
         public viewAgregarCategoria()
         {
             InitializeComponent();
+        }
+
+        public viewAgregarCategoria(Categoria categoria)
+        {
+            InitializeComponent();
+            _categoria = categoria;
+            Text = "Modificar Categoría";
+            lblTitle.Text = "Modificar Categoría";
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -41,13 +50,22 @@ namespace ArticulosAppViews
 
             if (MessageResult == DialogResult.Yes)
             {
-                agregar();
-                MessageBox.Show("Categoria agregada correctamente");
+                if (_categoria == null)
+                {
+                    agregar();
+                    MessageBox.Show("Categoría agregada correctamente");
+                } 
+                else
+                {
+                    modificar();
+                    MessageBox.Show("Categoría actualizada correctamente");
+                }
+                
                 Close();
             }
             else
             {
-                MessageBox.Show("Categoria no agregada");
+                MessageBox.Show("No se logró realizar la operación");
                 Close();
             }
 
@@ -71,6 +89,29 @@ namespace ArticulosAppViews
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void modificar()
+        {
+            CategoriaService service = new CategoriaService();
+            Categoria categoria = new Categoria(_categoria.Id, textBoxDescripcion.Text);
+
+            try
+            {
+                service.Update(categoria);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void viewAgregarCategoria_Load(object sender, EventArgs e)
+        {
+            if (_categoria != null)
+            {
+                textBoxDescripcion.Text = _categoria.Description;
             }
         }
     }

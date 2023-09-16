@@ -120,12 +120,6 @@
     <Compile Include="viewModificarArticulo.Designer.cs">
       <DependentUpon>viewModificarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="viewModificarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="viewModificarCategoria.Designer.cs">
-      <DependentUpon>viewModificarCategoria.cs</DependentUpon>
-    </Compile>
     <Compile Include="viewModificarMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewModificarArticulo.resx">
       <DependentUpon>viewModificarArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="viewModificarCategoria.resx">
-      <DependentUpon>viewModificarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewModificarMarca.resx">
       <DependentUpon>viewModificarMarca.cs</DependentUpon>

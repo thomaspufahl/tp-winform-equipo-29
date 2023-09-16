@@ -30,8 +30,10 @@ namespace ArticulosAppViews
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            viewModificarCategoria ventana = new viewModificarCategoria();
+            Categoria categoria = (Categoria) dataGridViewCategorias.CurrentRow.DataBoundItem;
+            viewAgregarCategoria ventana = new viewAgregarCategoria(categoria);
             ventana.ShowDialog();
+            LoadDb();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

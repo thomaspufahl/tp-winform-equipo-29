@@ -35,7 +35,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PbxFormulario = new System.Windows.Forms.PictureBox();
-            this.lblAgregarCategoria = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).BeginInit();
             this.SuspendLayout();
@@ -105,7 +105,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.PbxFormulario);
-            this.panel1.Controls.Add(this.lblAgregarCategoria);
+            this.panel1.Controls.Add(this.lblTitle);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -126,19 +126,19 @@
             this.PbxFormulario.TabIndex = 1;
             this.PbxFormulario.TabStop = false;
             // 
-            // lblAgregarCategoria
+            // lblTitle
             // 
-            this.lblAgregarCategoria.AutoSize = true;
-            this.lblAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblAgregarCategoria.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblAgregarCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblAgregarCategoria.Location = new System.Drawing.Point(24, 27);
-            this.lblAgregarCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAgregarCategoria.MaximumSize = new System.Drawing.Size(268, 25);
-            this.lblAgregarCategoria.Name = "lblAgregarCategoria";
-            this.lblAgregarCategoria.Size = new System.Drawing.Size(268, 25);
-            this.lblAgregarCategoria.TabIndex = 0;
-            this.lblAgregarCategoria.Text = "AGREGAR CATEGORIA";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(24, 27);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.MaximumSize = new System.Drawing.Size(268, 25);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(268, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "AGREGAR CATEGORÍA";
             // 
             // viewAgregarCategoria
             // 
@@ -156,7 +156,8 @@
             this.MinimumSize = new System.Drawing.Size(406, 435);
             this.Name = "viewAgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "viewAgregarCategoria";
+            this.Text = "Agregar Categoría";
+            this.Load += new System.EventHandler(this.viewAgregarCategoria_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).EndInit();
@@ -174,6 +175,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PbxFormulario;
-        private System.Windows.Forms.Label lblAgregarCategoria;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

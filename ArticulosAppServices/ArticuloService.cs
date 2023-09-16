@@ -12,6 +12,9 @@ namespace ArticulosAppServices
         private readonly AccesoDatos db = new AccesoDatos();
         public List<Articulo> GetAll()
         {
+            MarcaService marcaService = new MarcaService();
+            CategoriaService categoriaService = new CategoriaService();
+
             List<Articulo> articulos = new List<Articulo>();
 
             try
@@ -25,8 +28,13 @@ namespace ArticulosAppServices
                 string codigo;
                 string nombre;
                 string descripcion;
+
+                Marca marca;
                 int idMarca;
+
+                Categoria categoria;
                 int idCategoria;
+
                 decimal precio;
 
                 while(db.Reader.Read())
@@ -39,7 +47,10 @@ namespace ArticulosAppServices
                     idCategoria = (int) db.Reader["IdCategoria"];
                     precio = (decimal) db.Reader["Precio"];
 
-                    articulo = new Articulo(id, codigo, nombre, descripcion, idMarca, idCategoria, precio);
+                    marca = marcaService.GetById(idMarca);
+                    categoria = categoriaService.GetById(idCategoria);
+    
+                    articulo = new Articulo(id, codigo, nombre, descripcion, marca, categoria, precio);
 
                     articulos.Add(articulo);
                 }

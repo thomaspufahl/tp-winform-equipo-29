@@ -44,5 +44,24 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public void Add(Marca marca)
+        {
+            try
+            {
+                db.setQuery("INSERT INTO MARCAS (Descripcion) VALUES (@Descripcion)");
+                db.setParams("@Descripcion", marca.Description);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar la marca a la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

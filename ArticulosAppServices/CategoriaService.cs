@@ -39,7 +39,7 @@ namespace ArticulosAppServices
             } 
             catch (Exception ex)
             {
-                throw new Exception("Error en CategoriaService", ex);
+                throw new Exception("Error en al obtener la lista de categorias de la base de datos", ex);
             } 
             finally
             {

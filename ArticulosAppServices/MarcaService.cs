@@ -102,5 +102,37 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public Marca GetById(int idMarca)
+        {
+            int id;
+            string descripcion;
+
+            try
+            {
+                db.setQuery($"SELECT M.Id AS Id, M.Descripcion AS Descripcion FROM MARCAS M WHERE M.Id = {idMarca}");
+
+                db.executeSelectionQuery();
+
+                if (db.Reader.Read())
+                {
+                    id = (int)db.Reader["Id"];
+                    descripcion = (string)db.Reader["Descripcion"];
+
+                    return new Marca(id, descripcion);
+                }
+
+                return null;
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener la marca de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

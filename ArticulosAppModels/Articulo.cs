@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ArticulosAppModels
 {
@@ -14,7 +15,7 @@ namespace ArticulosAppModels
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
         public Categoria Categoria { get; set; }
-        public Imagen Imagen { get; set;}
+        public Imagen Imagen { get; set; }
         public float Precio { get; set; }
 
         public Articulo()
@@ -37,9 +38,6 @@ namespace ArticulosAppModels
             Imagen = new Imagen();
             Precio = precio;
         }
-
-
-
 
     }
 }

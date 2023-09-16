@@ -27,5 +27,6 @@ namespace ArticulosAppModels
         {
             return Description;
         }
+
     }
 }

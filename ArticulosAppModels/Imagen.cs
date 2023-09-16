@@ -25,5 +25,6 @@ namespace ArticulosAppModels
             IdArticulo = idart;
             UrlImagen = url;
         }
+
     }
 }

@@ -63,5 +63,24 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public void Update(Marca marca)
+        {
+            try
+            {
+                db.setQuery("UPDATE MARCAS SET Descripcion = @Descripcion WHERE Id = @Id");
+                db.setParams("@Descripcion", marca.Description);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar la marca en la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

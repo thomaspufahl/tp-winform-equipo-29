@@ -83,5 +83,24 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                db.setQuery("DELETE FROM MARCAS WHERE Id = @Id");
+                db.setParams("@Id", id);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar la marca de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

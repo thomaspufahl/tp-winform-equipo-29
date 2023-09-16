@@ -11,12 +11,13 @@ namespace ArticulosAppModels
         public int Id { get; set; }
         public string Description { get; set; }
 
-        public Marca()
-        {
-            Id = -1;
-            Description = string.Empty;
-        }
+        public Marca() { }
 
+        public Marca(string description)
+        {
+            Description = description;
+        }
+        
         public Marca(int id, string description)
         {
             Id = id;

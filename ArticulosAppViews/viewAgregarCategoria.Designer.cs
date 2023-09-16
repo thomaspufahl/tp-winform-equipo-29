@@ -30,15 +30,12 @@
         {
             this.lblCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblIdCategoria = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAgregarCategoria = new System.Windows.Forms.Label();
             this.PbxFormulario = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.lblAgregarCategoria = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).BeginInit();
             this.SuspendLayout();
@@ -71,44 +68,25 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // textBox2
+            // textBoxDescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(22, 223);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(333, 73);
-            this.textBox2.TabIndex = 72;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(198, 143);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(157, 20);
-            this.numericUpDown1.TabIndex = 70;
+            this.textBoxDescripcion.Location = new System.Drawing.Point(29, 162);
+            this.textBoxDescripcion.Multiline = true;
+            this.textBoxDescripcion.Name = "textBoxDescripcion";
+            this.textBoxDescripcion.Size = new System.Drawing.Size(333, 73);
+            this.textBoxDescripcion.TabIndex = 72;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.lblDescripcion.Location = new System.Drawing.Point(19, 202);
+            this.lblDescripcion.Location = new System.Drawing.Point(26, 132);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(100, 18);
             this.lblDescripcion.TabIndex = 73;
-            this.lblDescripcion.Text = "Descripcion";
-            // 
-            // lblIdCategoria
-            // 
-            this.lblIdCategoria.AutoSize = true;
-            this.lblIdCategoria.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.lblIdCategoria.Location = new System.Drawing.Point(19, 143);
-            this.lblIdCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIdCategoria.Name = "lblIdCategoria";
-            this.lblIdCategoria.Size = new System.Drawing.Size(172, 18);
-            this.lblIdCategoria.TabIndex = 71;
-            this.lblIdCategoria.Text = "Codigo de Categoria";
+            this.lblDescripcion.Text = "Descripción";
             // 
             // panel3
             // 
@@ -135,6 +113,19 @@
             this.panel1.Size = new System.Drawing.Size(397, 74);
             this.panel1.TabIndex = 68;
             // 
+            // PbxFormulario
+            // 
+            this.PbxFormulario.BackColor = System.Drawing.Color.Transparent;
+            this.PbxFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PbxFormulario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PbxFormulario.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
+            this.PbxFormulario.Location = new System.Drawing.Point(289, 11);
+            this.PbxFormulario.Name = "PbxFormulario";
+            this.PbxFormulario.Size = new System.Drawing.Size(100, 50);
+            this.PbxFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbxFormulario.TabIndex = 1;
+            this.PbxFormulario.TabStop = false;
+            // 
             // lblAgregarCategoria
             // 
             this.lblAgregarCategoria.AutoSize = true;
@@ -149,19 +140,6 @@
             this.lblAgregarCategoria.TabIndex = 0;
             this.lblAgregarCategoria.Text = "AGREGAR CATEGORIA";
             // 
-            // PbxFormulario
-            // 
-            this.PbxFormulario.BackColor = System.Drawing.Color.Transparent;
-            this.PbxFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PbxFormulario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PbxFormulario.Image = global::ArticulosAppViews.Properties.Resources.pngwing_com__1_;
-            this.PbxFormulario.Location = new System.Drawing.Point(289, 11);
-            this.PbxFormulario.Name = "PbxFormulario";
-            this.PbxFormulario.Size = new System.Drawing.Size(100, 50);
-            this.PbxFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbxFormulario.TabIndex = 1;
-            this.PbxFormulario.TabStop = false;
-            // 
             // viewAgregarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,10 +148,8 @@
             this.ClientSize = new System.Drawing.Size(390, 396);
             this.Controls.Add(this.lblCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.textBoxDescripcion);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.lblIdCategoria);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(406, 435);
@@ -181,7 +157,6 @@
             this.Name = "viewAgregarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "viewAgregarCategoria";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).EndInit();
@@ -194,10 +169,8 @@
 
         private System.Windows.Forms.Button lblCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Label lblIdCategoria;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PbxFormulario;

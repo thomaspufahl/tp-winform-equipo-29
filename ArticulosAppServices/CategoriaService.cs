@@ -48,6 +48,24 @@ namespace ArticulosAppServices
 
 
         }
+        public void Add(Categoria categoria)
+        {
+            try
+            {
+                db.setQuery("INSERT INTO CATEGORIAS (Descripcion) VALUES (@descripcion)");
+                db.setParams("@descripcion", categoria.Description);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar una categoria a la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
 
     }
 }

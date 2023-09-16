@@ -21,5 +21,10 @@ namespace ArticulosAppViews
         {
             Close();
         }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

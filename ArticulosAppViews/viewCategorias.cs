@@ -25,6 +25,7 @@ namespace ArticulosAppViews
         {
             viewAgregarCategoria ventana = new viewAgregarCategoria();
             ventana.ShowDialog();
+            LoadDb();
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace ArticulosAppViews
             ventana.ShowDialog();
         }
 
-        private void loadDb()
+        private void LoadDb()
         {
             CategoriaService service = new CategoriaService();
 
@@ -57,7 +58,7 @@ namespace ArticulosAppViews
 
         private void viewCategorias_Load(object sender, EventArgs e)
         {
-            loadDb();
+            LoadDb();
         }
     }
 }

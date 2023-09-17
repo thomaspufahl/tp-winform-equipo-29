@@ -47,5 +47,32 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+        public List<Imagen> GetAllByIdArticulo(int idArticulo)
+        {
+            List<Imagen> imagenes = new List<Imagen>();
+
+            try
+            {
+                db.setQuery("SELECT I.Id AS Id, I.IdArticulo AS IdArticulo, I.ImagenUrl AS UrlImagen FROM IMAGENES I WHERE I.IdArticulo = @IdArticulo");
+                db.setParams("@IdArticulo", idArticulo);
+
+                db.executeSelectionQuery();
+
+                while(db.Reader.Read())
+                {
+                    imagenes.Add(new Imagen((int)db.Reader["Id"], (int)db.Reader["IdArticulo"], (string)db.Reader["UrlImagen"]));
+                }
+
+                return imagenes;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en al obtener la lista de imagenes filtradas por Id de Articulo de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

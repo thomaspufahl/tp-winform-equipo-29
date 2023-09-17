@@ -36,6 +36,7 @@ namespace ArticulosAppServices
                     imagenes.Add(imagen);
                 }
 
+                return imagenes;
             }
             catch (Exception ex)
             {

@@ -89,6 +89,29 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+        public void Update(Articulo articulo)
+        {
+            try
+            {
+                db.setQuery("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id");
+                db.setParams("@Codigo", articulo.Codigo);
+                db.setParams("@Nombre", articulo.Nombre);
+                db.setParams("@Descripcion", articulo.Descripcion);
+                db.setParams("@IdMarca", articulo.Marca.Id);
+                db.setParams("@IdCategoria", articulo.Categoria.Id);
+                db.setParams("@Precio", articulo.Precio);
+                db.setParams("@Id", articulo.Id);
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar el articulo en la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }   
 
     }
 }

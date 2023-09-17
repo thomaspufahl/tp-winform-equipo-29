@@ -93,5 +93,13 @@ namespace ArticulosAppViews
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void viewAgregarMarca_Load(object sender, EventArgs e)
+        {
+            if (_marca != null)
+            {           
+                textBoxDescripcion.Text = _marca.Description;
+            }
+        }
     }
 }

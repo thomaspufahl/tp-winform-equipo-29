@@ -156,6 +156,7 @@
             this.Name = "viewAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "viewAgregarMarca";
+            this.Load += new System.EventHandler(this.viewAgregarMarca_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).EndInit();

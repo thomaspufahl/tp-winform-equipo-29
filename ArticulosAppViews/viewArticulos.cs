@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -255,6 +256,21 @@ namespace ArticulosAppViews
             viewAgregarImagen ventana = new viewAgregarImagen(ArticuloSeleccionado);
             ventana.ShowDialog();
             loadDb();
+        }
+
+        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            fastSearch();
+        }
+
+        private void fastSearch()
+        {
+            List<Articulo> list;
+
+            list = Articulos.FindAll(articulo => articulo.Nombre.ToLower().Contains(textBoxBuscar.Text.ToLower()));
+            
+            dataGridViewArticulos.DataSource = null;
+            dataGridViewArticulos.DataSource = list;
         }
     }
 }

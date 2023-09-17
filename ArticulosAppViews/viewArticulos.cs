@@ -50,6 +50,7 @@ namespace ArticulosAppViews
         {
             viewAgregarArticulo ventana = new viewAgregarArticulo();
             ventana.ShowDialog();
+            loadDb();
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)

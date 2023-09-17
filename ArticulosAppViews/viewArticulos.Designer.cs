@@ -59,6 +59,7 @@
             this.labelCodigo = new System.Windows.Forms.Label();
             this.buttonImagenAnterior = new System.Windows.Forms.Button();
             this.labelImagenActual = new System.Windows.Forms.Label();
+            this.buttonImagen = new System.Windows.Forms.Button();
             this.flowLayoutPanelGestor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).BeginInit();
             this.panelDetails.SuspendLayout();
@@ -74,6 +75,7 @@
             this.flowLayoutPanelGestor.Controls.Add(this.buttonFiltrar);
             this.flowLayoutPanelGestor.Controls.Add(this.comboBoxFiltrar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonNuevo);
+            this.flowLayoutPanelGestor.Controls.Add(this.buttonImagen);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonModificar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonEliminar);
             this.flowLayoutPanelGestor.Controls.Add(this.checkBoxDetails);
@@ -147,7 +149,7 @@
             this.buttonModificar.FlatAppearance.BorderSize = 0;
             this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.ForeColor = System.Drawing.Color.White;
-            this.buttonModificar.Location = new System.Drawing.Point(185, 57);
+            this.buttonModificar.Location = new System.Drawing.Point(358, 57);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(167, 23);
             this.buttonModificar.TabIndex = 5;
@@ -161,7 +163,7 @@
             this.buttonEliminar.FlatAppearance.BorderSize = 0;
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonEliminar.Location = new System.Drawing.Point(358, 57);
+            this.buttonEliminar.Location = new System.Drawing.Point(531, 57);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(167, 23);
             this.buttonEliminar.TabIndex = 6;
@@ -173,7 +175,7 @@
             // 
             this.checkBoxDetails.AutoSize = true;
             this.checkBoxDetails.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDetails.Location = new System.Drawing.Point(531, 57);
+            this.checkBoxDetails.Location = new System.Drawing.Point(704, 57);
             this.checkBoxDetails.Name = "checkBoxDetails";
             this.checkBoxDetails.Size = new System.Drawing.Size(120, 18);
             this.checkBoxDetails.TabIndex = 7;
@@ -409,6 +411,19 @@
             this.labelImagenActual.TabIndex = 10;
             this.labelImagenActual.Text = "Imagen";
             // 
+            // buttonImagen
+            // 
+            this.buttonImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.buttonImagen.FlatAppearance.BorderSize = 0;
+            this.buttonImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonImagen.ForeColor = System.Drawing.Color.White;
+            this.buttonImagen.Location = new System.Drawing.Point(185, 57);
+            this.buttonImagen.Name = "buttonImagen";
+            this.buttonImagen.Size = new System.Drawing.Size(167, 23);
+            this.buttonImagen.TabIndex = 8;
+            this.buttonImagen.Text = "Agregar Imagen";
+            this.buttonImagen.UseVisualStyleBackColor = false;
+            // 
             // viewArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
@@ -465,5 +480,6 @@
         private System.Windows.Forms.Button buttonSiguienteImagen;
         private System.Windows.Forms.Button buttonImagenAnterior;
         private System.Windows.Forms.Label labelImagenActual;
+        private System.Windows.Forms.Button buttonImagen;
     }
 }

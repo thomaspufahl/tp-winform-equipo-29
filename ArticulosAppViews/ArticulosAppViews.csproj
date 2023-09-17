@@ -64,6 +64,12 @@
     <Compile Include="viewAgregarCategoria.Designer.cs">
       <DependentUpon>viewAgregarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewAgregarImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewAgregarImagen.Designer.cs">
+      <DependentUpon>viewAgregarImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewAgregarMarca.cs">
       <SubType>Form</SubType>
     </Compile>

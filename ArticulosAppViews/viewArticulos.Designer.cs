@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanelGestor = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
@@ -39,9 +39,28 @@
             this.buttonNuevo = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.checkBoxDetails = new System.Windows.Forms.CheckBox();
             this.dataGridViewArticulos = new System.Windows.Forms.DataGridView();
+            this.panelDetails = new System.Windows.Forms.Panel();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.panelDetailsInformation = new System.Windows.Forms.Panel();
+            this.labelDescripcionValue = new System.Windows.Forms.Label();
+            this.labelPrecioValue = new System.Windows.Forms.Label();
+            this.labelMarcaValue = new System.Windows.Forms.Label();
+            this.labelCategoriaValue = new System.Windows.Forms.Label();
+            this.labelNombreValue = new System.Windows.Forms.Label();
+            this.labelCodigoValue = new System.Windows.Forms.Label();
+            this.labelDescripcion = new System.Windows.Forms.Label();
+            this.labelPrecio = new System.Windows.Forms.Label();
+            this.labelMarca = new System.Windows.Forms.Label();
+            this.labelCategoria = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelCodigo = new System.Windows.Forms.Label();
             this.flowLayoutPanelGestor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).BeginInit();
+            this.panelDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            this.panelDetailsInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanelGestor
@@ -54,6 +73,7 @@
             this.flowLayoutPanelGestor.Controls.Add(this.buttonNuevo);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonModificar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonEliminar);
+            this.flowLayoutPanelGestor.Controls.Add(this.checkBoxDetails);
             this.flowLayoutPanelGestor.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelGestor.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelGestor.Name = "flowLayoutPanelGestor";
@@ -146,41 +166,53 @@
             this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
+            // checkBoxDetails
+            // 
+            this.checkBoxDetails.AutoSize = true;
+            this.checkBoxDetails.ForeColor = System.Drawing.Color.White;
+            this.checkBoxDetails.Location = new System.Drawing.Point(531, 57);
+            this.checkBoxDetails.Name = "checkBoxDetails";
+            this.checkBoxDetails.Size = new System.Drawing.Size(120, 18);
+            this.checkBoxDetails.TabIndex = 7;
+            this.checkBoxDetails.Text = "Vista detallada";
+            this.checkBoxDetails.UseVisualStyleBackColor = true;
+            this.checkBoxDetails.CheckedChanged += new System.EventHandler(this.checkBoxDetails_CheckedChanged);
+            // 
             // dataGridViewArticulos
             // 
             this.dataGridViewArticulos.AllowUserToAddRows = false;
             this.dataGridViewArticulos.AllowUserToDeleteRows = false;
             this.dataGridViewArticulos.AllowUserToResizeColumns = false;
             this.dataGridViewArticulos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewArticulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.dataGridViewArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewArticulos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewArticulos.ColumnHeadersHeight = 35;
             this.dataGridViewArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewArticulos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewArticulos.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewArticulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewArticulos.EnableHeadersVisualStyles = false;
@@ -195,6 +227,150 @@
             this.dataGridViewArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewArticulos.Size = new System.Drawing.Size(1008, 429);
             this.dataGridViewArticulos.TabIndex = 6;
+            this.dataGridViewArticulos.SelectionChanged += new System.EventHandler(this.dataGridViewArticulos_SelectionChanged);
+            // 
+            // panelDetails
+            // 
+            this.panelDetails.Controls.Add(this.pictureBoxImage);
+            this.panelDetails.Controls.Add(this.panelDetailsInformation);
+            this.panelDetails.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelDetails.ForeColor = System.Drawing.Color.White;
+            this.panelDetails.Location = new System.Drawing.Point(408, 108);
+            this.panelDetails.Name = "panelDetails";
+            this.panelDetails.Size = new System.Drawing.Size(600, 429);
+            this.panelDetails.TabIndex = 7;
+            this.panelDetails.Visible = false;
+            // 
+            // pictureBoxImage
+            // 
+            this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxImage.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(600, 272);
+            this.pictureBoxImage.TabIndex = 2;
+            this.pictureBoxImage.TabStop = false;
+            // 
+            // panelDetailsInformation
+            // 
+            this.panelDetailsInformation.Controls.Add(this.labelDescripcionValue);
+            this.panelDetailsInformation.Controls.Add(this.labelPrecioValue);
+            this.panelDetailsInformation.Controls.Add(this.labelMarcaValue);
+            this.panelDetailsInformation.Controls.Add(this.labelCategoriaValue);
+            this.panelDetailsInformation.Controls.Add(this.labelNombreValue);
+            this.panelDetailsInformation.Controls.Add(this.labelCodigoValue);
+            this.panelDetailsInformation.Controls.Add(this.labelDescripcion);
+            this.panelDetailsInformation.Controls.Add(this.labelPrecio);
+            this.panelDetailsInformation.Controls.Add(this.labelMarca);
+            this.panelDetailsInformation.Controls.Add(this.labelCategoria);
+            this.panelDetailsInformation.Controls.Add(this.labelNombre);
+            this.panelDetailsInformation.Controls.Add(this.labelCodigo);
+            this.panelDetailsInformation.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDetailsInformation.Location = new System.Drawing.Point(0, 272);
+            this.panelDetailsInformation.Name = "panelDetailsInformation";
+            this.panelDetailsInformation.Size = new System.Drawing.Size(600, 157);
+            this.panelDetailsInformation.TabIndex = 1;
+            // 
+            // labelDescripcionValue
+            // 
+            this.labelDescripcionValue.AutoSize = true;
+            this.labelDescripcionValue.Location = new System.Drawing.Point(120, 124);
+            this.labelDescripcionValue.Name = "labelDescripcionValue";
+            this.labelDescripcionValue.Size = new System.Drawing.Size(0, 14);
+            this.labelDescripcionValue.TabIndex = 11;
+            // 
+            // labelPrecioValue
+            // 
+            this.labelPrecioValue.AutoSize = true;
+            this.labelPrecioValue.Location = new System.Drawing.Point(120, 14);
+            this.labelPrecioValue.Name = "labelPrecioValue";
+            this.labelPrecioValue.Size = new System.Drawing.Size(0, 14);
+            this.labelPrecioValue.TabIndex = 10;
+            // 
+            // labelMarcaValue
+            // 
+            this.labelMarcaValue.AutoSize = true;
+            this.labelMarcaValue.Location = new System.Drawing.Point(120, 80);
+            this.labelMarcaValue.Name = "labelMarcaValue";
+            this.labelMarcaValue.Size = new System.Drawing.Size(0, 14);
+            this.labelMarcaValue.TabIndex = 9;
+            // 
+            // labelCategoriaValue
+            // 
+            this.labelCategoriaValue.AutoSize = true;
+            this.labelCategoriaValue.Location = new System.Drawing.Point(120, 102);
+            this.labelCategoriaValue.Name = "labelCategoriaValue";
+            this.labelCategoriaValue.Size = new System.Drawing.Size(0, 14);
+            this.labelCategoriaValue.TabIndex = 8;
+            // 
+            // labelNombreValue
+            // 
+            this.labelNombreValue.AutoSize = true;
+            this.labelNombreValue.Location = new System.Drawing.Point(120, 58);
+            this.labelNombreValue.Name = "labelNombreValue";
+            this.labelNombreValue.Size = new System.Drawing.Size(0, 14);
+            this.labelNombreValue.TabIndex = 7;
+            // 
+            // labelCodigoValue
+            // 
+            this.labelCodigoValue.AutoSize = true;
+            this.labelCodigoValue.Location = new System.Drawing.Point(120, 36);
+            this.labelCodigoValue.Name = "labelCodigoValue";
+            this.labelCodigoValue.Size = new System.Drawing.Size(0, 14);
+            this.labelCodigoValue.TabIndex = 6;
+            // 
+            // labelDescripcion
+            // 
+            this.labelDescripcion.AutoSize = true;
+            this.labelDescripcion.Location = new System.Drawing.Point(19, 125);
+            this.labelDescripcion.Name = "labelDescripcion";
+            this.labelDescripcion.Size = new System.Drawing.Size(87, 14);
+            this.labelDescripcion.TabIndex = 5;
+            this.labelDescripcion.Text = "Descripcíon: ";
+            // 
+            // labelPrecio
+            // 
+            this.labelPrecio.AutoSize = true;
+            this.labelPrecio.Location = new System.Drawing.Point(19, 15);
+            this.labelPrecio.Name = "labelPrecio";
+            this.labelPrecio.Size = new System.Drawing.Size(54, 14);
+            this.labelPrecio.TabIndex = 4;
+            this.labelPrecio.Text = "Precio: ";
+            // 
+            // labelMarca
+            // 
+            this.labelMarca.AutoSize = true;
+            this.labelMarca.Location = new System.Drawing.Point(19, 81);
+            this.labelMarca.Name = "labelMarca";
+            this.labelMarca.Size = new System.Drawing.Size(53, 14);
+            this.labelMarca.TabIndex = 3;
+            this.labelMarca.Text = "Marca: ";
+            // 
+            // labelCategoria
+            // 
+            this.labelCategoria.AutoSize = true;
+            this.labelCategoria.Location = new System.Drawing.Point(19, 103);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(78, 14);
+            this.labelCategoria.TabIndex = 2;
+            this.labelCategoria.Text = "Categoría: ";
+            // 
+            // labelNombre
+            // 
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Location = new System.Drawing.Point(19, 59);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(65, 14);
+            this.labelNombre.TabIndex = 1;
+            this.labelNombre.Text = "Nombre: ";
+            // 
+            // labelCodigo
+            // 
+            this.labelCodigo.AutoSize = true;
+            this.labelCodigo.Location = new System.Drawing.Point(19, 37);
+            this.labelCodigo.Name = "labelCodigo";
+            this.labelCodigo.Size = new System.Drawing.Size(60, 14);
+            this.labelCodigo.TabIndex = 0;
+            this.labelCodigo.Text = "Código: ";
             // 
             // viewArticulos
             // 
@@ -202,6 +378,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.Controls.Add(this.panelDetails);
             this.Controls.Add(this.dataGridViewArticulos);
             this.Controls.Add(this.flowLayoutPanelGestor);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +390,10 @@
             this.flowLayoutPanelGestor.ResumeLayout(false);
             this.flowLayoutPanelGestor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).EndInit();
+            this.panelDetails.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            this.panelDetailsInformation.ResumeLayout(false);
+            this.panelDetailsInformation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -226,6 +407,22 @@
         private System.Windows.Forms.Button buttonNuevo;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.CheckBox checkBoxDetails;
         private System.Windows.Forms.DataGridView dataGridViewArticulos;
+        private System.Windows.Forms.Panel panelDetails;
+        private System.Windows.Forms.Panel panelDetailsInformation;
+        private System.Windows.Forms.Label labelCodigo;
+        private System.Windows.Forms.Label labelMarca;
+        private System.Windows.Forms.Label labelCategoria;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelDescripcion;
+        private System.Windows.Forms.Label labelPrecio;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Label labelDescripcionValue;
+        private System.Windows.Forms.Label labelPrecioValue;
+        private System.Windows.Forms.Label labelMarcaValue;
+        private System.Windows.Forms.Label labelCategoriaValue;
+        private System.Windows.Forms.Label labelNombreValue;
+        private System.Windows.Forms.Label labelCodigoValue;
     }
 }

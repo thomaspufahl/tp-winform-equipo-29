@@ -68,8 +68,27 @@ namespace ArticulosAppViews
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            /*
             viewEliminarArticulo ventana = new viewEliminarArticulo();
             ventana.ShowDialog();
+            */
+
+            if (ArticuloSeleccionado == null) return;
+
+            ArticuloService service = new ArticuloService();
+
+            DialogResult MessageResult = MessageBox.Show("¿Está seguro que desea eliminar el artículo?", "Eliminar artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (MessageResult == DialogResult.No) return;
+
+            try
+            {
+                service.Delete(ArticuloSeleccionado.Id);
+                loadDb();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         private void flowLayoutPanelGestor_Paint(object sender, PaintEventArgs e)
         {

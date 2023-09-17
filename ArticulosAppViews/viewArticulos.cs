@@ -15,6 +15,10 @@ namespace ArticulosAppViews
     public partial class viewArticulos : Form
     {
         private List<Articulo> Articulos = null;
+        private List<Imagen> Imagenes = null;
+        private int ImagenActual = 0;
+        private Articulo ArticuloSeleccionado = null;
+
         public viewArticulos()
         {
             InitializeComponent();
@@ -59,29 +63,19 @@ namespace ArticulosAppViews
             viewEliminarArticulo ventana = new viewEliminarArticulo();
             ventana.ShowDialog();
         }
-
-        private void loadDb()
-        {
-            ArticuloService service = new ArticuloService();
-
-            try
-            {
-                Articulos = service.GetAll();
-
-                dataGridViewArticulos.DataSource = Articulos;
-
-                dataGridViewArticulos.Columns["Id"].Visible = false;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         private void flowLayoutPanelGestor_Paint(object sender, PaintEventArgs e)
         {
             loadDb();
+        }
+        private void dataGridViewArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewArticulos.CurrentRow == null) return;
+
+            ArticuloSeleccionado = (Articulo)dataGridViewArticulos.CurrentRow.DataBoundItem;
+            ImagenActual = 0;
+
+            if (checkBoxDetails.Checked)
+                loadDetailsPanel();
         }
 
         private void checkBoxDetails_CheckedChanged(object sender, EventArgs e)
@@ -114,26 +108,98 @@ namespace ArticulosAppViews
             }
         }
 
-        private void loadDetailsPanel()
+
+        private void loadDb()
         {
-            Articulo articulo = (Articulo) dataGridViewArticulos.CurrentRow.DataBoundItem;
+            ArticuloService service = new ArticuloService();
 
-            labelPrecioValue.Text = articulo.Precio.ToString();
-            labelCodigoValue.Text = articulo.Codigo;
-            labelNombreValue.Text = articulo.Nombre;
-            labelMarcaValue.Text = articulo.Marca.Description;
+            try
+            {
+                Articulos = service.GetAll();
 
-            if (articulo.Categoria != null)
-                labelCategoriaValue.Text = articulo.Categoria.Description;
-            else labelCategoriaValue.Text = "Sin categoria";
+                dataGridViewArticulos.DataSource = Articulos;
 
-            labelDescripcionValue.Text = articulo.Descripcion;
+                dataGridViewArticulos.Columns["Id"].Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        private void dataGridViewArticulos_SelectionChanged(object sender, EventArgs e)
+        private void loadDetailsPanel()
         {
-            if (checkBoxDetails.Checked)
-                loadDetailsPanel();
+            //Articulo articulo = (Articulo) dataGridViewArticulos.CurrentRow.DataBoundItem;
+
+            loadArticulosImagenes();
+
+            //cargarImagen(ImagenesEnumeradas.ElementAt(0).UrlImagen);
+            cargarImagen(Imagenes[ImagenActual].UrlImagen);
+            labelImagenActual.Text = $"Imagen {ImagenActual+1}/{Imagenes.Count}";
+
+            labelPrecioValue.Text = ArticuloSeleccionado.Precio.ToString();
+            labelCodigoValue.Text = ArticuloSeleccionado.Codigo;
+            labelNombreValue.Text = ArticuloSeleccionado.Nombre;
+            labelMarcaValue.Text = ArticuloSeleccionado.Marca.Description;
+
+            if (ArticuloSeleccionado.Categoria != null)
+                labelCategoriaValue.Text = ArticuloSeleccionado.Categoria.Description;
+            else labelCategoriaValue.Text = "Sin categoria";
+
+            labelDescripcionValue.Text = ArticuloSeleccionado.Descripcion;
+        }
+
+        private void loadArticulosImagenes()
+        {
+            ImagenService imagenService = new ImagenService();
+            List<Imagen> imagenesByArticulo = new List<Imagen>();
+
+            if (ArticuloSeleccionado == null) return;
+
+            try
+            {
+                imagenesByArticulo = imagenService.GetAllByIdArticulo(ArticuloSeleccionado.Id);
+
+                Imagenes = imagenesByArticulo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void cargarImagen(string URL)
+        {
+            try
+            {
+                pictureBoxImage.Load(URL);
+            }
+            catch (Exception)
+            {
+                pictureBoxImage.Load("https://cdn3.vectorstock.com/i/1000x1000/91/27/error-icon-vector-19829127.jpg");
+            }
+        }
+
+        private void buttonSiguienteImagen_Click(object sender, EventArgs e)
+        {
+            if (ImagenActual < Imagenes.Count - 1)
+            {
+                ImagenActual++;
+                cargarImagen(Imagenes[ImagenActual].UrlImagen);
+                labelImagenActual.Text = $"Imagen {ImagenActual + 1}/{Imagenes.Count}";
+            }
+        }
+
+        private void buttonImagenAnterior_Click(object sender, EventArgs e)
+        {
+            if (ImagenActual > 0)
+            {
+                ImagenActual--;
+                cargarImagen(Imagenes[ImagenActual].UrlImagen);
+                labelImagenActual.Text = $"Imagen {ImagenActual + 1}/{Imagenes.Count}";
+            }
         }
     }
 }

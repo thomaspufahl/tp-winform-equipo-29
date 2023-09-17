@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanelGestor = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
@@ -40,6 +40,7 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.checkBoxDetails = new System.Windows.Forms.CheckBox();
+            this.buttonSiguienteImagen = new System.Windows.Forms.Button();
             this.dataGridViewArticulos = new System.Windows.Forms.DataGridView();
             this.panelDetails = new System.Windows.Forms.Panel();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,8 @@
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelCodigo = new System.Windows.Forms.Label();
+            this.buttonImagenAnterior = new System.Windows.Forms.Button();
+            this.labelImagenActual = new System.Windows.Forms.Label();
             this.flowLayoutPanelGestor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).BeginInit();
             this.panelDetails.SuspendLayout();
@@ -178,41 +181,52 @@
             this.checkBoxDetails.UseVisualStyleBackColor = true;
             this.checkBoxDetails.CheckedChanged += new System.EventHandler(this.checkBoxDetails_CheckedChanged);
             // 
+            // buttonSiguienteImagen
+            // 
+            this.buttonSiguienteImagen.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.buttonSiguienteImagen.Location = new System.Drawing.Point(278, 243);
+            this.buttonSiguienteImagen.Name = "buttonSiguienteImagen";
+            this.buttonSiguienteImagen.Size = new System.Drawing.Size(35, 23);
+            this.buttonSiguienteImagen.TabIndex = 8;
+            this.buttonSiguienteImagen.Text = ">";
+            this.buttonSiguienteImagen.UseVisualStyleBackColor = true;
+            this.buttonSiguienteImagen.Click += new System.EventHandler(this.buttonSiguienteImagen_Click);
+            // 
             // dataGridViewArticulos
             // 
             this.dataGridViewArticulos.AllowUserToAddRows = false;
             this.dataGridViewArticulos.AllowUserToDeleteRows = false;
             this.dataGridViewArticulos.AllowUserToResizeColumns = false;
             this.dataGridViewArticulos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewArticulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.dataGridViewArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewArticulos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewArticulos.ColumnHeadersHeight = 35;
             this.dataGridViewArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewArticulos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewArticulos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewArticulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewArticulos.EnableHeadersVisualStyles = false;
@@ -231,6 +245,9 @@
             // 
             // panelDetails
             // 
+            this.panelDetails.Controls.Add(this.labelImagenActual);
+            this.panelDetails.Controls.Add(this.buttonImagenAnterior);
+            this.panelDetails.Controls.Add(this.buttonSiguienteImagen);
             this.panelDetails.Controls.Add(this.pictureBoxImage);
             this.panelDetails.Controls.Add(this.panelDetailsInformation);
             this.panelDetails.Dock = System.Windows.Forms.DockStyle.Right;
@@ -372,6 +389,26 @@
             this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "Código: ";
             // 
+            // buttonImagenAnterior
+            // 
+            this.buttonImagenAnterior.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.buttonImagenAnterior.Location = new System.Drawing.Point(324, 243);
+            this.buttonImagenAnterior.Name = "buttonImagenAnterior";
+            this.buttonImagenAnterior.Size = new System.Drawing.Size(35, 23);
+            this.buttonImagenAnterior.TabIndex = 9;
+            this.buttonImagenAnterior.Text = "<";
+            this.buttonImagenAnterior.UseVisualStyleBackColor = true;
+            this.buttonImagenAnterior.Click += new System.EventHandler(this.buttonImagenAnterior_Click);
+            // 
+            // labelImagenActual
+            // 
+            this.labelImagenActual.AutoSize = true;
+            this.labelImagenActual.Location = new System.Drawing.Point(242, 226);
+            this.labelImagenActual.Name = "labelImagenActual";
+            this.labelImagenActual.Size = new System.Drawing.Size(55, 14);
+            this.labelImagenActual.TabIndex = 10;
+            this.labelImagenActual.Text = "Imagen";
+            // 
             // viewArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
@@ -391,6 +428,7 @@
             this.flowLayoutPanelGestor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).EndInit();
             this.panelDetails.ResumeLayout(false);
+            this.panelDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.panelDetailsInformation.ResumeLayout(false);
             this.panelDetailsInformation.PerformLayout();
@@ -424,5 +462,8 @@
         private System.Windows.Forms.Label labelCategoriaValue;
         private System.Windows.Forms.Label labelNombreValue;
         private System.Windows.Forms.Label labelCodigoValue;
+        private System.Windows.Forms.Button buttonSiguienteImagen;
+        private System.Windows.Forms.Button buttonImagenAnterior;
+        private System.Windows.Forms.Label labelImagenActual;
     }
 }

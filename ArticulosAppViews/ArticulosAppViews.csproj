@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="viewAdvertencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="viewAdvertencia.Designer.cs">
-      <DependentUpon>viewAdvertencia.cs</DependentUpon>
-    </Compile>
     <Compile Include="viewAgregarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +106,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="viewAdvertencia.resx">
-      <DependentUpon>viewAdvertencia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="viewAgregarArticulo.resx">
       <DependentUpon>viewAgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>

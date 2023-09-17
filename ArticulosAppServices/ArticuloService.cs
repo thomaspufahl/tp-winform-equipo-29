@@ -113,5 +113,25 @@ namespace ArticulosAppServices
             }
         }   
 
+
+
+        public void Delete(int id)
+        {
+            try
+            {
+                db.setQuery("DELETE FROM ARTICULOS WHERE Id = @Id");
+                db.setParams("@Id", id);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar el articulo de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

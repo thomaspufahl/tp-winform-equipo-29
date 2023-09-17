@@ -14,6 +14,12 @@ namespace ArticulosAppModels
 
 
         public Imagen() {}
+
+        public Imagen(int id)
+        {
+            Id = id;
+        }
+
         public Imagen(int idArticulo, string urlImagen)
         {
             IdArticulo = idArticulo;

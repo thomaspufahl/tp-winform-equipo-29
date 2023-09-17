@@ -15,14 +15,17 @@ namespace ArticulosAppViews
     public partial class viewAgregarArticulo : Form
     {
         private Articulo ArticuloSeleccionado = null;
+        private List<Imagen> ImagenesParaAgregar = null;
         public viewAgregarArticulo()
         {
             InitializeComponent();
+            btnAceptar.DialogResult = DialogResult.Yes;
         }
 
         public viewAgregarArticulo(Articulo articulo)
         {
             InitializeComponent();
+            btnAceptar.DialogResult = DialogResult.Yes;
             ArticuloSeleccionado = articulo;
             Text = "Modificar Artículo";
             labelTitulo.Text = "Modificar Artículo";
@@ -36,12 +39,6 @@ namespace ArticulosAppViews
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            /*
-            viewAdvertencia ventana = new viewAdvertencia();
-            ventana.ShowDialog();
-            */
-
-
             DialogResult MessageResult = MessageBox.Show("¿Seguro que quieres realizar esta operación?", "ATENCION!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (MessageResult == DialogResult.Yes)
@@ -49,7 +46,7 @@ namespace ArticulosAppViews
                 if (ArticuloSeleccionado == null)
                 {
                     agregar();
-                    MessageBox.Show("Artículo agregado correctamente");
+                    MessageBox.Show("Articulo agregado correctamente!");
                 }
                 else
                 {
@@ -76,6 +73,7 @@ namespace ArticulosAppViews
             articulo.Marca = (Marca)comboBoxMarcas.SelectedItem;
             articulo.Categoria = (Categoria)comboBoxCategorias.SelectedItem;
             articulo.Precio = decimal.Parse(textBoxPrecio.Text);
+            articulo.Imagenes = ImagenesParaAgregar;
 
             try
             {
@@ -85,7 +83,6 @@ namespace ArticulosAppViews
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
         private void modificar()
@@ -142,6 +139,12 @@ namespace ArticulosAppViews
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void buttonAgregarImagen_Click(object sender, EventArgs e)
+        {
+            viewAgregarImagen ventana = new viewAgregarImagen();
+            ventana.Show();
         }
     }
 }

@@ -103,7 +103,7 @@
             // 
             // textBoxDescripcion
             // 
-            this.textBoxDescripcion.Location = new System.Drawing.Point(236, 186);
+            this.textBoxDescripcion.Location = new System.Drawing.Point(236, 182);
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(188, 61);
@@ -111,7 +111,7 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(236, 147);
+            this.textBoxNombre.Location = new System.Drawing.Point(236, 143);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(188, 21);
             this.textBoxNombre.TabIndex = 35;
@@ -121,7 +121,7 @@
             this.labelPrecio.AutoSize = true;
             this.labelPrecio.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.labelPrecio.Location = new System.Drawing.Point(127, 343);
+            this.labelPrecio.Location = new System.Drawing.Point(127, 339);
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrecio.Name = "labelPrecio";
             this.labelPrecio.Size = new System.Drawing.Size(58, 18);
@@ -133,7 +133,7 @@
             this.labelCategoria.AutoSize = true;
             this.labelCategoria.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.labelCategoria.Location = new System.Drawing.Point(127, 304);
+            this.labelCategoria.Location = new System.Drawing.Point(127, 300);
             this.labelCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(87, 18);
@@ -145,7 +145,7 @@
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.labelMarca.Location = new System.Drawing.Point(127, 265);
+            this.labelMarca.Location = new System.Drawing.Point(127, 261);
             this.labelMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(57, 18);
@@ -157,7 +157,7 @@
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.labelDescripcion.Location = new System.Drawing.Point(127, 186);
+            this.labelDescripcion.Location = new System.Drawing.Point(127, 182);
             this.labelDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(100, 18);
@@ -169,7 +169,7 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.labelNombre.Location = new System.Drawing.Point(127, 147);
+            this.labelNombre.Location = new System.Drawing.Point(127, 143);
             this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(73, 18);
@@ -181,7 +181,7 @@
             this.labelCodigo.AutoSize = true;
             this.labelCodigo.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.labelCodigo.Location = new System.Drawing.Point(127, 108);
+            this.labelCodigo.Location = new System.Drawing.Point(127, 104);
             this.labelCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(68, 18);
@@ -218,7 +218,7 @@
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(236, 108);
+            this.textBoxCodigo.Location = new System.Drawing.Point(236, 104);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(188, 21);
             this.textBoxCodigo.TabIndex = 50;
@@ -227,7 +227,7 @@
             // 
             this.comboBoxCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategorias.FormattingEnabled = true;
-            this.comboBoxCategorias.Location = new System.Drawing.Point(236, 304);
+            this.comboBoxCategorias.Location = new System.Drawing.Point(236, 300);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(188, 21);
             this.comboBoxCategorias.TabIndex = 51;
@@ -236,14 +236,14 @@
             // 
             this.comboBoxMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarcas.FormattingEnabled = true;
-            this.comboBoxMarcas.Location = new System.Drawing.Point(236, 265);
+            this.comboBoxMarcas.Location = new System.Drawing.Point(236, 261);
             this.comboBoxMarcas.Name = "comboBoxMarcas";
             this.comboBoxMarcas.Size = new System.Drawing.Size(188, 21);
             this.comboBoxMarcas.TabIndex = 52;
             // 
             // textBoxPrecio
             // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(236, 343);
+            this.textBoxPrecio.Location = new System.Drawing.Point(236, 339);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(188, 21);
             this.textBoxPrecio.TabIndex = 53;

@@ -43,6 +43,8 @@
             this.buttonSiguienteImagen = new System.Windows.Forms.Button();
             this.dataGridViewArticulos = new System.Windows.Forms.DataGridView();
             this.panelDetails = new System.Windows.Forms.Panel();
+            this.labelImagenActual = new System.Windows.Forms.Label();
+            this.buttonImagenAnterior = new System.Windows.Forms.Button();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.panelDetailsInformation = new System.Windows.Forms.Panel();
             this.labelDescripcionValue = new System.Windows.Forms.Label();
@@ -57,9 +59,6 @@
             this.labelCategoria = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelCodigo = new System.Windows.Forms.Label();
-            this.buttonImagenAnterior = new System.Windows.Forms.Button();
-            this.labelImagenActual = new System.Windows.Forms.Label();
-            this.buttonImagen = new System.Windows.Forms.Button();
             this.flowLayoutPanelGestor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArticulos)).BeginInit();
             this.panelDetails.SuspendLayout();
@@ -75,7 +74,6 @@
             this.flowLayoutPanelGestor.Controls.Add(this.buttonFiltrar);
             this.flowLayoutPanelGestor.Controls.Add(this.comboBoxFiltrar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonNuevo);
-            this.flowLayoutPanelGestor.Controls.Add(this.buttonImagen);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonModificar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonEliminar);
             this.flowLayoutPanelGestor.Controls.Add(this.checkBoxDetails);
@@ -83,7 +81,7 @@
             this.flowLayoutPanelGestor.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelGestor.Name = "flowLayoutPanelGestor";
             this.flowLayoutPanelGestor.Padding = new System.Windows.Forms.Padding(9, 25, 0, 0);
-            this.flowLayoutPanelGestor.Size = new System.Drawing.Size(1008, 108);
+            this.flowLayoutPanelGestor.Size = new System.Drawing.Size(1008, 107);
             this.flowLayoutPanelGestor.TabIndex = 0;
             this.flowLayoutPanelGestor.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelGestor_Paint);
             // 
@@ -149,7 +147,7 @@
             this.buttonModificar.FlatAppearance.BorderSize = 0;
             this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.ForeColor = System.Drawing.Color.White;
-            this.buttonModificar.Location = new System.Drawing.Point(358, 57);
+            this.buttonModificar.Location = new System.Drawing.Point(185, 57);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(167, 23);
             this.buttonModificar.TabIndex = 5;
@@ -163,7 +161,7 @@
             this.buttonEliminar.FlatAppearance.BorderSize = 0;
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonEliminar.Location = new System.Drawing.Point(531, 57);
+            this.buttonEliminar.Location = new System.Drawing.Point(358, 57);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(167, 23);
             this.buttonEliminar.TabIndex = 6;
@@ -174,8 +172,9 @@
             // checkBoxDetails
             // 
             this.checkBoxDetails.AutoSize = true;
+            this.flowLayoutPanelGestor.SetFlowBreak(this.checkBoxDetails, true);
             this.checkBoxDetails.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDetails.Location = new System.Drawing.Point(704, 57);
+            this.checkBoxDetails.Location = new System.Drawing.Point(531, 57);
             this.checkBoxDetails.Name = "checkBoxDetails";
             this.checkBoxDetails.Size = new System.Drawing.Size(120, 18);
             this.checkBoxDetails.TabIndex = 7;
@@ -234,14 +233,14 @@
             this.dataGridViewArticulos.EnableHeadersVisualStyles = false;
             this.dataGridViewArticulos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.dataGridViewArticulos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridViewArticulos.Location = new System.Drawing.Point(0, 108);
+            this.dataGridViewArticulos.Location = new System.Drawing.Point(0, 107);
             this.dataGridViewArticulos.MultiSelect = false;
             this.dataGridViewArticulos.Name = "dataGridViewArticulos";
             this.dataGridViewArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewArticulos.RowHeadersVisible = false;
             this.dataGridViewArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewArticulos.Size = new System.Drawing.Size(1008, 429);
+            this.dataGridViewArticulos.Size = new System.Drawing.Size(1008, 430);
             this.dataGridViewArticulos.TabIndex = 6;
             this.dataGridViewArticulos.SelectionChanged += new System.EventHandler(this.dataGridViewArticulos_SelectionChanged);
             // 
@@ -254,18 +253,38 @@
             this.panelDetails.Controls.Add(this.panelDetailsInformation);
             this.panelDetails.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDetails.ForeColor = System.Drawing.Color.White;
-            this.panelDetails.Location = new System.Drawing.Point(408, 108);
+            this.panelDetails.Location = new System.Drawing.Point(408, 107);
             this.panelDetails.Name = "panelDetails";
-            this.panelDetails.Size = new System.Drawing.Size(600, 429);
+            this.panelDetails.Size = new System.Drawing.Size(600, 430);
             this.panelDetails.TabIndex = 7;
             this.panelDetails.Visible = false;
+            // 
+            // labelImagenActual
+            // 
+            this.labelImagenActual.AutoSize = true;
+            this.labelImagenActual.Location = new System.Drawing.Point(242, 226);
+            this.labelImagenActual.Name = "labelImagenActual";
+            this.labelImagenActual.Size = new System.Drawing.Size(55, 14);
+            this.labelImagenActual.TabIndex = 10;
+            this.labelImagenActual.Text = "Imagen";
+            // 
+            // buttonImagenAnterior
+            // 
+            this.buttonImagenAnterior.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.buttonImagenAnterior.Location = new System.Drawing.Point(324, 243);
+            this.buttonImagenAnterior.Name = "buttonImagenAnterior";
+            this.buttonImagenAnterior.Size = new System.Drawing.Size(35, 23);
+            this.buttonImagenAnterior.TabIndex = 9;
+            this.buttonImagenAnterior.Text = "<";
+            this.buttonImagenAnterior.UseVisualStyleBackColor = true;
+            this.buttonImagenAnterior.Click += new System.EventHandler(this.buttonImagenAnterior_Click);
             // 
             // pictureBoxImage
             // 
             this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxImage.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(600, 272);
+            this.pictureBoxImage.Size = new System.Drawing.Size(600, 273);
             this.pictureBoxImage.TabIndex = 2;
             this.pictureBoxImage.TabStop = false;
             // 
@@ -284,7 +303,7 @@
             this.panelDetailsInformation.Controls.Add(this.labelNombre);
             this.panelDetailsInformation.Controls.Add(this.labelCodigo);
             this.panelDetailsInformation.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDetailsInformation.Location = new System.Drawing.Point(0, 272);
+            this.panelDetailsInformation.Location = new System.Drawing.Point(0, 273);
             this.panelDetailsInformation.Name = "panelDetailsInformation";
             this.panelDetailsInformation.Size = new System.Drawing.Size(600, 157);
             this.panelDetailsInformation.TabIndex = 1;
@@ -391,39 +410,6 @@
             this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "Código: ";
             // 
-            // buttonImagenAnterior
-            // 
-            this.buttonImagenAnterior.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonImagenAnterior.Location = new System.Drawing.Point(324, 243);
-            this.buttonImagenAnterior.Name = "buttonImagenAnterior";
-            this.buttonImagenAnterior.Size = new System.Drawing.Size(35, 23);
-            this.buttonImagenAnterior.TabIndex = 9;
-            this.buttonImagenAnterior.Text = "<";
-            this.buttonImagenAnterior.UseVisualStyleBackColor = true;
-            this.buttonImagenAnterior.Click += new System.EventHandler(this.buttonImagenAnterior_Click);
-            // 
-            // labelImagenActual
-            // 
-            this.labelImagenActual.AutoSize = true;
-            this.labelImagenActual.Location = new System.Drawing.Point(242, 226);
-            this.labelImagenActual.Name = "labelImagenActual";
-            this.labelImagenActual.Size = new System.Drawing.Size(55, 14);
-            this.labelImagenActual.TabIndex = 10;
-            this.labelImagenActual.Text = "Imagen";
-            // 
-            // buttonImagen
-            // 
-            this.buttonImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.buttonImagen.FlatAppearance.BorderSize = 0;
-            this.buttonImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonImagen.ForeColor = System.Drawing.Color.White;
-            this.buttonImagen.Location = new System.Drawing.Point(185, 57);
-            this.buttonImagen.Name = "buttonImagen";
-            this.buttonImagen.Size = new System.Drawing.Size(167, 23);
-            this.buttonImagen.TabIndex = 8;
-            this.buttonImagen.Text = "Agregar Imagen";
-            this.buttonImagen.UseVisualStyleBackColor = false;
-            // 
             // viewArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
@@ -480,6 +466,5 @@
         private System.Windows.Forms.Button buttonSiguienteImagen;
         private System.Windows.Forms.Button buttonImagenAnterior;
         private System.Windows.Forms.Label labelImagenActual;
-        private System.Windows.Forms.Button buttonImagen;
     }
 }

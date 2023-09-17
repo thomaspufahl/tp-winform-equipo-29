@@ -145,6 +145,9 @@
     <EmbeddedResource Include="viewAgregarCategoria.resx">
       <DependentUpon>viewAgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="viewAgregarImagen.resx">
+      <DependentUpon>viewAgregarImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewAgregarMarca.resx">
       <DependentUpon>viewAgregarMarca.cs</DependentUpon>
     </EmbeddedResource>

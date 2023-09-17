@@ -18,6 +18,8 @@ namespace ArticulosAppModels
         public Categoria Categoria { get; set; }
         public decimal Precio { get; set; }
 
+        public List<Imagen> Imagenes { get; set; }
+
         public Articulo() {}
 
         public Articulo(string codigo, string nombre, string descripcion, Marca marca, Categoria categoria, decimal precio)

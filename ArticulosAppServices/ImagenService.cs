@@ -74,5 +74,23 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public void Add(Imagen imagen)
+        {
+            try
+            {
+                db.setQuery($"INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES ('{imagen.IdArticulo}', '{imagen.UrlImagen}')");
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar una imagen a la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

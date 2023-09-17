@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,10 +16,9 @@ namespace ArticulosAppViews
     public partial class viewArticulos : Form
     {
         private List<Articulo> Articulos = null;
-        private List<Imagen> Imagenes = null;
         private int ImagenActual = 0;
         private Articulo ArticuloSeleccionado = null;
-
+        private Articulo ultimoArticulo = null;
         public viewArticulos()
         {
             InitializeComponent();
@@ -51,14 +51,21 @@ namespace ArticulosAppViews
             viewAgregarArticulo ventana = new viewAgregarArticulo();
             ventana.ShowDialog();
             loadDb();
+
+            if (ventana.DialogResult == DialogResult.Yes)
+            {
+                DialogResult agregarImagenResult = MessageBox.Show("¿Desea agregar una imagen al artículo?", "Agregar imagen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (agregarImagenResult == DialogResult.No) return;
+                Articulo articulo = Articulos.Last();
+
+                viewAgregarImagen ventanaImagen = new viewAgregarImagen(articulo);
+                ventanaImagen.ShowDialog();
+            };
+            
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            /*
-            viewModificarArticulo ventana = new viewModificarArticulo();
-            ventana.ShowDialog();
-            */
             if (ArticuloSeleccionado == null) return;
 
             viewAgregarArticulo ventana = new viewAgregarArticulo(ArticuloSeleccionado);
@@ -68,11 +75,6 @@ namespace ArticulosAppViews
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            /*
-            viewEliminarArticulo ventana = new viewEliminarArticulo();
-            ventana.ShowDialog();
-            */
-
             if (ArticuloSeleccionado == null) return;
 
             ArticuloService service = new ArticuloService();
@@ -99,10 +101,12 @@ namespace ArticulosAppViews
             if (dataGridViewArticulos.CurrentRow == null) return;
 
             ArticuloSeleccionado = (Articulo)dataGridViewArticulos.CurrentRow.DataBoundItem;
-            ImagenActual = 0;
+            cargarImagenesDelArticulo();
 
-            if (checkBoxDetails.Checked)
-                loadDetailsPanel();
+            ImagenActual = 0;
+            if (!(esIndiceValido(ImagenActual))) ImagenActual = -1;
+
+            if (checkBoxDetails.Checked) loadDetailsPanel();
         }
 
         private void checkBoxDetails_CheckedChanged(object sender, EventArgs e)
@@ -135,7 +139,6 @@ namespace ArticulosAppViews
             }
         }
 
-
         private void loadDb()
         {
             ArticuloService service = new ArticuloService();
@@ -148,6 +151,8 @@ namespace ArticulosAppViews
 
                 dataGridViewArticulos.Columns["Id"].Visible = false;
 
+                ultimoArticulo = Articulos.Last();
+
             }
             catch (Exception ex)
             {
@@ -157,13 +162,9 @@ namespace ArticulosAppViews
 
         private void loadDetailsPanel()
         {
-            //Articulo articulo = (Articulo) dataGridViewArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(ImagenActual);
 
-            loadArticulosImagenes();
-
-            //cargarImagen(ImagenesEnumeradas.ElementAt(0).UrlImagen);
-            cargarImagen(Imagenes[ImagenActual].UrlImagen);
-            labelImagenActual.Text = $"Imagen {ImagenActual+1}/{Imagenes.Count}";
+            labelImagenActual.Text = $"Imagen {ImagenActual+1}/{ArticuloSeleccionado.Imagenes.Count}";
 
             labelPrecioValue.Text = ArticuloSeleccionado.Precio.ToString();
             labelCodigoValue.Text = ArticuloSeleccionado.Codigo;
@@ -177,24 +178,31 @@ namespace ArticulosAppViews
             labelDescripcionValue.Text = ArticuloSeleccionado.Descripcion;
         }
 
-        private void loadArticulosImagenes()
+        private void cargarImagenesDelArticulo()
         {
-            ImagenService imagenService = new ImagenService();
-            List<Imagen> imagenesByArticulo = new List<Imagen>();
-
             if (ArticuloSeleccionado == null) return;
+
+            ImagenService imagenService = new ImagenService();
 
             try
             {
-                imagenesByArticulo = imagenService.GetAllByIdArticulo(ArticuloSeleccionado.Id);
-
-                Imagenes = imagenesByArticulo;
+                ArticuloSeleccionado.Imagenes = imagenService.GetAllByIdArticulo(ArticuloSeleccionado.Id);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
 
+        private bool esIndiceValido(int indice)
+        {
+            if (ArticuloSeleccionado == null) return false;
+
+            if (indice < 0) return false;
+            if (indice >= ArticuloSeleccionado.Imagenes.Count) return false;
+            if (ArticuloSeleccionado.Imagenes.Count == 0) return false;
+
+            return true;
         }
 
         private void cargarImagen(string URL)
@@ -209,14 +217,27 @@ namespace ArticulosAppViews
             }
         }
 
+        private void cargarImagen(int indice)
+        {
+            if (esIndiceValido(indice))
+                cargarImagen(ArticuloSeleccionado.Imagenes[indice].UrlImagen);
+            else
+                pictureBoxImage.Load("https://cdn3.vectorstock.com/i/1000x1000/91/27/error-icon-vector-19829127.jpg");
+        }
+
         private void buttonSiguienteImagen_Click(object sender, EventArgs e)
         {
-            if (ImagenActual < Imagenes.Count - 1)
+            if (ImagenActual < ArticuloSeleccionado.Imagenes.Count - 1)
             {
                 ImagenActual++;
-                cargarImagen(Imagenes[ImagenActual].UrlImagen);
-                labelImagenActual.Text = $"Imagen {ImagenActual + 1}/{Imagenes.Count}";
+                cargarImagen(ArticuloSeleccionado.Imagenes[ImagenActual].UrlImagen);
+                actualizarLabelImagenActual();
             }
+        }
+
+        private void actualizarLabelImagenActual()
+        {
+            labelImagenActual.Text = $"Imagen {ImagenActual + 1}/{ArticuloSeleccionado.Imagenes.Count}";
         }
 
         private void buttonImagenAnterior_Click(object sender, EventArgs e)
@@ -224,9 +245,16 @@ namespace ArticulosAppViews
             if (ImagenActual > 0)
             {
                 ImagenActual--;
-                cargarImagen(Imagenes[ImagenActual].UrlImagen);
-                labelImagenActual.Text = $"Imagen {ImagenActual + 1}/{Imagenes.Count}";
+                cargarImagen(ArticuloSeleccionado.Imagenes[ImagenActual].UrlImagen);
+                actualizarLabelImagenActual();
             }
+        }
+
+        private void buttonImagen_Click(object sender, EventArgs e)
+        {
+            viewAgregarImagen ventana = new viewAgregarImagen(ArticuloSeleccionado);
+            ventana.ShowDialog();
+            loadDb();
         }
     }
 }

@@ -55,8 +55,15 @@ namespace ArticulosAppViews
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
+            /*
             viewModificarArticulo ventana = new viewModificarArticulo();
             ventana.ShowDialog();
+            */
+            if (ArticuloSeleccionado == null) return;
+
+            viewAgregarArticulo ventana = new viewAgregarArticulo(ArticuloSeleccionado);
+            ventana.ShowDialog();
+            loadDb();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

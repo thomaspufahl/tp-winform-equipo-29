@@ -14,9 +14,19 @@ namespace ArticulosAppViews
 {
     public partial class viewAgregarArticulo : Form
     {
+        private Articulo ArticuloSeleccionado = null;
         public viewAgregarArticulo()
         {
             InitializeComponent();
+        }
+
+        public viewAgregarArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            ArticuloSeleccionado = articulo;
+            Text = "Modificar Artículo";
+            labelTitulo.Text = "Modificar Artículo";
+            btnAceptar.Text = "Modificar";
         }
 
         private void lblCancelar_Click(object sender, EventArgs e)
@@ -36,8 +46,16 @@ namespace ArticulosAppViews
 
             if (MessageResult == DialogResult.Yes)
             {
-                agregar();
-                MessageBox.Show("Artículo agregado correctamente");
+                if (ArticuloSeleccionado == null)
+                {
+                    agregar();
+                    MessageBox.Show("Artículo agregado correctamente");
+                }
+                else
+                {
+                    modificar();
+                    MessageBox.Show("Artículo modificado correctamente");
+                }
 
                 Close();
             }
@@ -70,13 +88,60 @@ namespace ArticulosAppViews
 
         }
 
+        private void modificar()
+        {
+            ArticuloService service = new ArticuloService();
+            Articulo articulo = new Articulo
+                (
+                ArticuloSeleccionado.Id,
+                textBoxCodigo.Text,
+                textBoxNombre.Text,
+                textBoxDescripcion.Text,
+                (Marca)comboBoxMarcas.SelectedItem,
+                (Categoria)comboBoxCategorias.SelectedItem,
+                decimal.Parse(textBoxPrecio.Text)
+                );
+
+            try
+            {
+                service.Update(articulo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void viewAgregarArticulo_Load(object sender, EventArgs e)
         {
-            comboBoxMarcas.DataSource = new MarcaService().GetAll();
-            comboBoxCategorias.DataSource = new CategoriaService().GetAll();
+            try
+            {
+                comboBoxMarcas.DataSource = new MarcaService().GetAll();
+                comboBoxMarcas.ValueMember = "Id";
+                comboBoxMarcas.DisplayMember = "Description";
 
-            comboBoxMarcas.SelectedItem = null;
-            comboBoxCategorias.SelectedItem = null;
+                comboBoxCategorias.DataSource = new CategoriaService().GetAll();
+                comboBoxCategorias.ValueMember = "Id";
+                comboBoxCategorias.DisplayMember = "Description";
+
+                if (ArticuloSeleccionado == null)
+                {
+                    comboBoxMarcas.SelectedItem = null;
+                    comboBoxCategorias.SelectedItem = null;
+                    return;
+                }
+
+                textBoxCodigo.Text = ArticuloSeleccionado.Codigo;
+                textBoxNombre.Text = ArticuloSeleccionado.Nombre;
+                textBoxDescripcion.Text = ArticuloSeleccionado.Descripcion;
+                comboBoxMarcas.SelectedValue = ArticuloSeleccionado.Marca.Id;
+                comboBoxCategorias.SelectedValue = ArticuloSeleccionado.Categoria.Id;
+                textBoxPrecio.Text = ArticuloSeleccionado.Precio.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

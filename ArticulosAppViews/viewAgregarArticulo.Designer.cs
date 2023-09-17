@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAgregarArticulo = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PbxFormulario = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -50,25 +50,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.PbxFormulario)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblAgregarArticulo
+            // labelTitulo
             // 
-            this.lblAgregarArticulo.AutoSize = true;
-            this.lblAgregarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblAgregarArticulo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblAgregarArticulo.ForeColor = System.Drawing.Color.White;
-            this.lblAgregarArticulo.Location = new System.Drawing.Point(151, 27);
-            this.lblAgregarArticulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAgregarArticulo.Name = "lblAgregarArticulo";
-            this.lblAgregarArticulo.Size = new System.Drawing.Size(251, 25);
-            this.lblAgregarArticulo.TabIndex = 0;
-            this.lblAgregarArticulo.Text = "AGREGAR ARTÍCULO";
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelTitulo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
+            this.labelTitulo.ForeColor = System.Drawing.Color.White;
+            this.labelTitulo.Location = new System.Drawing.Point(151, 27);
+            this.labelTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(251, 25);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "AGREGAR ARTÍCULO";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.PbxFormulario);
-            this.panel1.Controls.Add(this.lblAgregarArticulo);
+            this.panel1.Controls.Add(this.labelTitulo);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -288,7 +288,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblAgregarArticulo;
+        private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox PbxFormulario;

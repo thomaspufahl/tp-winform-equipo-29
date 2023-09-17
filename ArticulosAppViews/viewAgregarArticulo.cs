@@ -146,5 +146,13 @@ namespace ArticulosAppViews
             viewAgregarImagen ventana = new viewAgregarImagen();
             ventana.Show();
         }
+
+        private void textBoxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ',') e.KeyChar = '.';
+            
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.') e.Handled = true;
+
+        }
     }
 }

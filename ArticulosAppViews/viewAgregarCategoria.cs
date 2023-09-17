@@ -30,21 +30,14 @@ namespace ArticulosAppViews
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            /*
-            viewAdvertencia ventana = new viewAdvertencia();
-            DialogResult result = ventana.ShowDialog();
+            if (textBoxDescripcion.Text.Length < 1)
+            {
+                MessageBox.Show("Debe ingresar una descripción");
+                return;
+            }
+                
 
-            if (result == DialogResult.Cancel)
-            {
-                MessageBox.Show("Categoria no agregada");
-            }
-            else 
-            {
-                agregar();
-                MessageBox.Show("Categoria agregada correctamente");
-                Close();
-            }
-            */
+
 
             DialogResult MessageResult = MessageBox.Show("¿Seguro que quieres realizar esta operación?", "ATENCION!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -76,7 +69,6 @@ namespace ArticulosAppViews
         {
             Close();
         }
-
 
         private void agregar()
         {

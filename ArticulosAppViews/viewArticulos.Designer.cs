@@ -185,10 +185,10 @@
             // buttonSiguienteImagen
             // 
             this.buttonSiguienteImagen.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonSiguienteImagen.Location = new System.Drawing.Point(278, 243);
+            this.buttonSiguienteImagen.Location = new System.Drawing.Point(303, 243);
             this.buttonSiguienteImagen.Name = "buttonSiguienteImagen";
             this.buttonSiguienteImagen.Size = new System.Drawing.Size(35, 23);
-            this.buttonSiguienteImagen.TabIndex = 8;
+            this.buttonSiguienteImagen.TabIndex = 0;
             this.buttonSiguienteImagen.Text = ">";
             this.buttonSiguienteImagen.UseVisualStyleBackColor = true;
             this.buttonSiguienteImagen.Click += new System.EventHandler(this.buttonSiguienteImagen_Click);
@@ -256,25 +256,25 @@
             this.panelDetails.Location = new System.Drawing.Point(408, 107);
             this.panelDetails.Name = "panelDetails";
             this.panelDetails.Size = new System.Drawing.Size(600, 430);
-            this.panelDetails.TabIndex = 7;
+            this.panelDetails.TabIndex = 1;
             this.panelDetails.Visible = false;
             // 
             // labelImagenActual
             // 
             this.labelImagenActual.AutoSize = true;
-            this.labelImagenActual.Location = new System.Drawing.Point(242, 226);
+            this.labelImagenActual.Location = new System.Drawing.Point(267, 226);
             this.labelImagenActual.Name = "labelImagenActual";
             this.labelImagenActual.Size = new System.Drawing.Size(55, 14);
-            this.labelImagenActual.TabIndex = 10;
+            this.labelImagenActual.TabIndex = 2;
             this.labelImagenActual.Text = "Imagen";
             // 
             // buttonImagenAnterior
             // 
             this.buttonImagenAnterior.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.buttonImagenAnterior.Location = new System.Drawing.Point(324, 243);
+            this.buttonImagenAnterior.Location = new System.Drawing.Point(262, 243);
             this.buttonImagenAnterior.Name = "buttonImagenAnterior";
             this.buttonImagenAnterior.Size = new System.Drawing.Size(35, 23);
-            this.buttonImagenAnterior.TabIndex = 9;
+            this.buttonImagenAnterior.TabIndex = 1;
             this.buttonImagenAnterior.Text = "<";
             this.buttonImagenAnterior.UseVisualStyleBackColor = true;
             this.buttonImagenAnterior.Click += new System.EventHandler(this.buttonImagenAnterior_Click);

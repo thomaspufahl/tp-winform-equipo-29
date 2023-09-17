@@ -63,7 +63,7 @@
             this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(800, 450);
-            this.panelContainer.TabIndex = 1;
+            this.panelContainer.TabIndex = 0;
             // 
             // pictureBoxImagen
             // 
@@ -109,7 +109,7 @@
             this.textBoxAgregarImagenLink.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxAgregarImagenLink.Name = "textBoxAgregarImagenLink";
             this.textBoxAgregarImagenLink.Size = new System.Drawing.Size(289, 22);
-            this.textBoxAgregarImagenLink.TabIndex = 7;
+            this.textBoxAgregarImagenLink.TabIndex = 0;
             // 
             // labelTotalImagenes
             // 
@@ -127,7 +127,7 @@
             this.buttonSiguiente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSiguiente.Name = "buttonSiguiente";
             this.buttonSiguiente.Size = new System.Drawing.Size(100, 25);
-            this.buttonSiguiente.TabIndex = 5;
+            this.buttonSiguiente.TabIndex = 2;
             this.buttonSiguiente.Text = "Siguiente";
             this.buttonSiguiente.UseVisualStyleBackColor = true;
             this.buttonSiguiente.Click += new System.EventHandler(this.buttonSiguiente_Click);
@@ -138,7 +138,7 @@
             this.buttonAnterior.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAnterior.Name = "buttonAnterior";
             this.buttonAnterior.Size = new System.Drawing.Size(100, 25);
-            this.buttonAnterior.TabIndex = 4;
+            this.buttonAnterior.TabIndex = 3;
             this.buttonAnterior.Text = "Anterior";
             this.buttonAnterior.UseVisualStyleBackColor = true;
             this.buttonAnterior.Click += new System.EventHandler(this.buttonAnterior_Click);
@@ -149,7 +149,7 @@
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(100, 25);
-            this.buttonCancelar.TabIndex = 3;
+            this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -160,7 +160,7 @@
             this.buttonConfirmar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(100, 25);
-            this.buttonConfirmar.TabIndex = 2;
+            this.buttonConfirmar.TabIndex = 4;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);

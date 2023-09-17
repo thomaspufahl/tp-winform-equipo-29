@@ -49,7 +49,7 @@
             this.lblCancelar.Location = new System.Drawing.Point(304, 357);
             this.lblCancelar.Name = "lblCancelar";
             this.lblCancelar.Size = new System.Drawing.Size(75, 23);
-            this.lblCancelar.TabIndex = 67;
+            this.lblCancelar.TabIndex = 2;
             this.lblCancelar.Text = "Cancelar";
             this.lblCancelar.UseVisualStyleBackColor = false;
             this.lblCancelar.Click += new System.EventHandler(this.lblCancelar_Click);
@@ -63,7 +63,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(24, 357);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 66;
+            this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -74,7 +74,7 @@
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(333, 73);
-            this.textBoxDescripcion.TabIndex = 55;
+            this.textBoxDescripcion.TabIndex = 0;
             // 
             // lblDescripcion
             // 
@@ -85,7 +85,7 @@
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(100, 18);
-            this.lblDescripcion.TabIndex = 59;
+            this.lblDescripcion.TabIndex = 3;
             this.lblDescripcion.Text = "Descripcion";
             // 
             // panel3
@@ -98,7 +98,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(397, 17);
-            this.panel3.TabIndex = 51;
+            this.panel3.TabIndex = 5;
             // 
             // panel1
             // 
@@ -111,7 +111,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(397, 74);
-            this.panel1.TabIndex = 50;
+            this.panel1.TabIndex = 4;
             // 
             // PbxFormulario
             // 

@@ -59,7 +59,7 @@
             this.flowLayoutPanelGestor.Name = "flowLayoutPanelGestor";
             this.flowLayoutPanelGestor.Padding = new System.Windows.Forms.Padding(9, 25, 0, 0);
             this.flowLayoutPanelGestor.Size = new System.Drawing.Size(1008, 108);
-            this.flowLayoutPanelGestor.TabIndex = 2;
+            this.flowLayoutPanelGestor.TabIndex = 0;
             // 
             // buttonBuscar
             // 
@@ -113,7 +113,7 @@
             this.buttonNuevo.Location = new System.Drawing.Point(12, 57);
             this.buttonNuevo.Name = "buttonNuevo";
             this.buttonNuevo.Size = new System.Drawing.Size(167, 23);
-            this.buttonNuevo.TabIndex = 0;
+            this.buttonNuevo.TabIndex = 4;
             this.buttonNuevo.Text = "Nuevo";
             this.buttonNuevo.UseVisualStyleBackColor = false;
             this.buttonNuevo.Click += new System.EventHandler(this.buttonNuevo_Click);
@@ -128,7 +128,7 @@
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.buttonModificar.Size = new System.Drawing.Size(167, 23);
-            this.buttonModificar.TabIndex = 1;
+            this.buttonModificar.TabIndex = 5;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
             this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
@@ -142,7 +142,7 @@
             this.buttonEliminar.Location = new System.Drawing.Point(358, 57);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(167, 23);
-            this.buttonEliminar.TabIndex = 2;
+            this.buttonEliminar.TabIndex = 6;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
@@ -195,7 +195,7 @@
             this.dataGridViewCategorias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCategorias.Size = new System.Drawing.Size(1008, 429);
-            this.dataGridViewCategorias.TabIndex = 5;
+            this.dataGridViewCategorias.TabIndex = 1;
             // 
             // viewCategorias
             // 

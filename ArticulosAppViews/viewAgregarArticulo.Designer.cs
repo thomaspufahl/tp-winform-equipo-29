@@ -74,7 +74,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 74);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 14;
             // 
             // PbxFormulario
             // 
@@ -99,7 +99,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(555, 17);
-            this.panel3.TabIndex = 2;
+            this.panel3.TabIndex = 15;
             // 
             // textBoxDescripcion
             // 
@@ -107,14 +107,14 @@
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(188, 61);
-            this.textBoxDescripcion.TabIndex = 37;
+            this.textBoxDescripcion.TabIndex = 2;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(236, 143);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(188, 21);
-            this.textBoxNombre.TabIndex = 35;
+            this.textBoxNombre.TabIndex = 1;
             // 
             // labelPrecio
             // 
@@ -125,7 +125,7 @@
             this.labelPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrecio.Name = "labelPrecio";
             this.labelPrecio.Size = new System.Drawing.Size(58, 18);
-            this.labelPrecio.TabIndex = 47;
+            this.labelPrecio.TabIndex = 13;
             this.labelPrecio.Text = "Precio";
             // 
             // labelCategoria
@@ -137,7 +137,7 @@
             this.labelCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(87, 18);
-            this.labelCategoria.TabIndex = 45;
+            this.labelCategoria.TabIndex = 12;
             this.labelCategoria.Text = "Categoría";
             // 
             // labelMarca
@@ -149,7 +149,7 @@
             this.labelMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(57, 18);
-            this.labelMarca.TabIndex = 43;
+            this.labelMarca.TabIndex = 11;
             this.labelMarca.Text = "Marca";
             // 
             // labelDescripcion
@@ -161,7 +161,7 @@
             this.labelDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(100, 18);
-            this.labelDescripcion.TabIndex = 41;
+            this.labelDescripcion.TabIndex = 10;
             this.labelDescripcion.Text = "Descripción";
             // 
             // labelNombre
@@ -173,7 +173,7 @@
             this.labelNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(73, 18);
-            this.labelNombre.TabIndex = 38;
+            this.labelNombre.TabIndex = 9;
             this.labelNombre.Text = "Nombre";
             // 
             // labelCodigo
@@ -185,7 +185,7 @@
             this.labelCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(68, 18);
-            this.labelCodigo.TabIndex = 36;
+            this.labelCodigo.TabIndex = 8;
             this.labelCodigo.Text = "Código ";
             // 
             // btnCancelar
@@ -197,7 +197,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(353, 423);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 49;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.lblCancelar_Click);
@@ -211,7 +211,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(125, 423);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 48;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -221,7 +221,7 @@
             this.textBoxCodigo.Location = new System.Drawing.Point(236, 104);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(188, 21);
-            this.textBoxCodigo.TabIndex = 50;
+            this.textBoxCodigo.TabIndex = 0;
             // 
             // comboBoxCategorias
             // 
@@ -230,7 +230,7 @@
             this.comboBoxCategorias.Location = new System.Drawing.Point(236, 300);
             this.comboBoxCategorias.Name = "comboBoxCategorias";
             this.comboBoxCategorias.Size = new System.Drawing.Size(188, 21);
-            this.comboBoxCategorias.TabIndex = 51;
+            this.comboBoxCategorias.TabIndex = 4;
             // 
             // comboBoxMarcas
             // 
@@ -239,14 +239,14 @@
             this.comboBoxMarcas.Location = new System.Drawing.Point(236, 261);
             this.comboBoxMarcas.Name = "comboBoxMarcas";
             this.comboBoxMarcas.Size = new System.Drawing.Size(188, 21);
-            this.comboBoxMarcas.TabIndex = 52;
+            this.comboBoxMarcas.TabIndex = 3;
             // 
             // textBoxPrecio
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(236, 339);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(188, 21);
-            this.textBoxPrecio.TabIndex = 53;
+            this.textBoxPrecio.TabIndex = 5;
             this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
             // 
             // viewAgregarArticulo

@@ -85,7 +85,7 @@
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
             this.buttonSalir.Size = new System.Drawing.Size(240, 65);
-            this.buttonSalir.TabIndex = 9;
+            this.buttonSalir.TabIndex = 3;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSalir.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.buttonCategorias.Name = "buttonCategorias";
             this.buttonCategorias.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
             this.buttonCategorias.Size = new System.Drawing.Size(240, 65);
-            this.buttonCategorias.TabIndex = 8;
+            this.buttonCategorias.TabIndex = 2;
             this.buttonCategorias.Text = "Categorías";
             this.buttonCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCategorias.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.buttonMarcas.Name = "buttonMarcas";
             this.buttonMarcas.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
             this.buttonMarcas.Size = new System.Drawing.Size(240, 65);
-            this.buttonMarcas.TabIndex = 7;
+            this.buttonMarcas.TabIndex = 1;
             this.buttonMarcas.Text = "Marcas";
             this.buttonMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonMarcas.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.buttonArticulos.Name = "buttonArticulos";
             this.buttonArticulos.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
             this.buttonArticulos.Size = new System.Drawing.Size(240, 65);
-            this.buttonArticulos.TabIndex = 6;
+            this.buttonArticulos.TabIndex = 0;
             this.buttonArticulos.Text = "Artículos";
             this.buttonArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArticulos.UseVisualStyleBackColor = true;

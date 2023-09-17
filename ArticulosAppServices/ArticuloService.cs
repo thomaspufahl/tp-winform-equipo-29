@@ -66,6 +66,29 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+        public void Add(Articulo articulo)
+        {
+            try
+            {
+                db.setQuery("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                db.setParams("@Codigo", articulo.Codigo);
+                db.setParams("@Nombre", articulo.Nombre);
+                db.setParams("@Descripcion", articulo.Descripcion);
+                db.setParams("@IdMarca", articulo.Marca.Id);
+                db.setParams("@IdCategoria", articulo.Categoria.Id);
+                db.setParams("@Precio", articulo.Precio);
+
+                db.executeActionQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar el articulo a la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
 
     }
 }

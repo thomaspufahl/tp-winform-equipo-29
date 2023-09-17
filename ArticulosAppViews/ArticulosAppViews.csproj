@@ -100,12 +100,6 @@
     <Compile Include="viewEliminarCategoria.Designer.cs">
       <DependentUpon>viewEliminarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="viewEliminarMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="viewEliminarMarca.Designer.cs">
-      <DependentUpon>viewEliminarMarca.cs</DependentUpon>
-    </Compile>
     <Compile Include="viewMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewEliminarCategoria.resx">
       <DependentUpon>viewEliminarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="viewEliminarMarca.resx">
-      <DependentUpon>viewEliminarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewMain.resx">
       <DependentUpon>viewMain.cs</DependentUpon>

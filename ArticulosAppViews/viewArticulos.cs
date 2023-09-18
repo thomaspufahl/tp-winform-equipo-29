@@ -287,12 +287,14 @@ namespace ArticulosAppViews
             if (opcion.Equals("Nombre"))
             {
                 comboBoxCriterio.Items.Clear();
+                textBoxFiltro.Text = "";
                 comboBoxCriterio.Items.Add("Empieza con");
                 comboBoxCriterio.Items.Add("Contiene");
                 comboBoxCriterio.Items.Add("Termina con");
             }
             else
             {
+                textBoxFiltro.Text = "";
                 comboBoxCriterio.Items.Clear();
                 comboBoxCriterio.Items.Add("Mayor a");
                 comboBoxCriterio.Items.Add("Igual a");
@@ -312,7 +314,7 @@ namespace ArticulosAppViews
         
         private void textBoxFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            /*
+            
             try
             {
                 string campo = comboBoxCampo.SelectedItem.ToString();
@@ -329,7 +331,7 @@ namespace ArticulosAppViews
             {
                 MessageBox.Show("Seleccione un campo");
             }
-            */
+            
         }
 
         private void buttonFiltrar_Click(object sender, EventArgs e)
@@ -346,9 +348,9 @@ namespace ArticulosAppViews
                 dataGridViewArticulos.DataSource = service.GetByFilter(campo, criterio, filtro);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"Seleccione un campo y un criterio\n{ex}");
+                MessageBox.Show($"Seleccione un campo y un criterio");
             }
         }
     }

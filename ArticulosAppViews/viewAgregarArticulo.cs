@@ -132,7 +132,12 @@ namespace ArticulosAppViews
                 textBoxNombre.Text = ArticuloSeleccionado.Nombre;
                 textBoxDescripcion.Text = ArticuloSeleccionado.Descripcion;
                 comboBoxMarcas.SelectedValue = ArticuloSeleccionado.Marca.Id;
-                comboBoxCategorias.SelectedValue = ArticuloSeleccionado.Categoria.Id;
+
+                if (ArticuloSeleccionado.Categoria != null)
+                    comboBoxCategorias.SelectedValue = ArticuloSeleccionado.Categoria.Id;
+                else comboBoxCategorias.SelectedItem = null;
+
+
                 textBoxPrecio.Text = ArticuloSeleccionado.Precio.ToString();
             }
             catch (Exception ex)

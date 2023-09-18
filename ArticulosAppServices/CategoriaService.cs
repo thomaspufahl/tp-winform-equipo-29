@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -129,6 +130,52 @@ namespace ArticulosAppServices
             catch (Exception ex)
             {
                 throw new Exception("Error al obtener una categoria de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
+
+        public List<Categoria> GetByFilter(string criterio, string filtro)
+        {
+            List<Categoria> list = new List<Categoria>();
+
+            try
+            {
+                string consulta = "SELECT C.Id AS Id, C.Descripcion AS Descripcion FROM CATEGORIAS C WHERE ";
+
+                switch (criterio)
+                {
+                    case "Descripcion comienza con":
+                        consulta += $"C.Descripcion LIKE '{filtro}%'";
+                        break;
+                    case "Descripcion contiene":    
+                        consulta += $"C.Descripcion LIKE '%{filtro}%'";
+                        break;
+                    case "Descripcion termina con":
+                        consulta += $"C.Descripcion LIKE '%{filtro}'";
+                        break;
+                }
+
+                db.setQuery(consulta);
+
+                db.executeSelectionQuery();
+
+                while (db.Reader.Read())
+                {
+                    int id = (int)db.Reader["Id"];
+                    string descripcion = (string)db.Reader["Descripcion"];
+
+                    list.Add(new Categoria(id, descripcion));
+                }
+
+                return list;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener una categoria filtrada de la base de datos", ex);
             }
             finally
             {

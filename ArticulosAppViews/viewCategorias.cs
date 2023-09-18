@@ -80,6 +80,10 @@ namespace ArticulosAppViews
         private void viewCategorias_Load(object sender, EventArgs e)
         {
             LoadDb();
+
+            comboBoxCriterio.Items.Add("Descripcion comienza con");
+            comboBoxCriterio.Items.Add("Descripcion contiene");
+            comboBoxCriterio.Items.Add("Descripcion termina con");
         }
 
         private void textBoxBuscar_TextChanged(object sender, EventArgs e)
@@ -95,6 +99,30 @@ namespace ArticulosAppViews
 
             dataGridViewCategorias.DataSource = null;
             dataGridViewCategorias.DataSource = list;
+        }
+
+        private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFiltrar_Click(object sender, EventArgs e)
+        {
+            CategoriaService service = new CategoriaService();
+
+            try
+            {
+                string criterio = comboBoxCriterio.SelectedItem.ToString();
+                string filtro = textBoxFiltro.Text;
+
+                dataGridViewCategorias.DataSource = null;
+                dataGridViewCategorias.DataSource = service.GetByFilter(criterio, filtro);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Seleccione un campo y un criterio");
+            }
         }
     }
 }

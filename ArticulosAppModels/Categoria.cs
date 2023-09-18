@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace ArticulosAppModels
     public class Categoria
     {
         public int Id { get; }
+
+        [DisplayName("Descripción")]
         public string Description { get; set; }
 
         public Categoria() { }

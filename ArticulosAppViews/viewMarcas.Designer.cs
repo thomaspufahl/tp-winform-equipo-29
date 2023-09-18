@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanelGestor = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridViewMarcas = new System.Windows.Forms.DataGridView();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.labelCriterio = new System.Windows.Forms.Label();
@@ -42,7 +41,7 @@
             this.buttonNuevo = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
-            this.checkBoxDetails = new System.Windows.Forms.CheckBox();
+            this.dataGridViewMarcas = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanelGestor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarcas)).BeginInit();
             this.SuspendLayout();
@@ -58,63 +57,12 @@
             this.flowLayoutPanelGestor.Controls.Add(this.buttonNuevo);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonModificar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonEliminar);
-            this.flowLayoutPanelGestor.Controls.Add(this.checkBoxDetails);
             this.flowLayoutPanelGestor.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelGestor.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelGestor.Name = "flowLayoutPanelGestor";
             this.flowLayoutPanelGestor.Padding = new System.Windows.Forms.Padding(9, 25, 0, 0);
             this.flowLayoutPanelGestor.Size = new System.Drawing.Size(1008, 133);
             this.flowLayoutPanelGestor.TabIndex = 0;
-            // 
-            // dataGridViewMarcas
-            // 
-            this.dataGridViewMarcas.AllowUserToAddRows = false;
-            this.dataGridViewMarcas.AllowUserToDeleteRows = false;
-            this.dataGridViewMarcas.AllowUserToResizeColumns = false;
-            this.dataGridViewMarcas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewMarcas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewMarcas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.dataGridViewMarcas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewMarcas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewMarcas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewMarcas.ColumnHeadersHeight = 35;
-            this.dataGridViewMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewMarcas.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewMarcas.EnableHeadersVisualStyles = false;
-            this.dataGridViewMarcas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dataGridViewMarcas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridViewMarcas.Location = new System.Drawing.Point(0, 133);
-            this.dataGridViewMarcas.MultiSelect = false;
-            this.dataGridViewMarcas.Name = "dataGridViewMarcas";
-            this.dataGridViewMarcas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridViewMarcas.RowHeadersVisible = false;
-            this.dataGridViewMarcas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridViewMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMarcas.Size = new System.Drawing.Size(1008, 404);
-            this.dataGridViewMarcas.TabIndex = 1;
             // 
             // buttonBuscar
             // 
@@ -216,17 +164,55 @@
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
             // 
-            // checkBoxDetails
+            // dataGridViewMarcas
             // 
-            this.checkBoxDetails.AutoSize = true;
-            this.flowLayoutPanelGestor.SetFlowBreak(this.checkBoxDetails, true);
-            this.checkBoxDetails.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDetails.Location = new System.Drawing.Point(531, 86);
-            this.checkBoxDetails.Name = "checkBoxDetails";
-            this.checkBoxDetails.Size = new System.Drawing.Size(120, 18);
-            this.checkBoxDetails.TabIndex = 32;
-            this.checkBoxDetails.Text = "Vista detallada";
-            this.checkBoxDetails.UseVisualStyleBackColor = true;
+            this.dataGridViewMarcas.AllowUserToAddRows = false;
+            this.dataGridViewMarcas.AllowUserToDeleteRows = false;
+            this.dataGridViewMarcas.AllowUserToResizeColumns = false;
+            this.dataGridViewMarcas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewMarcas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewMarcas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dataGridViewMarcas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewMarcas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewMarcas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewMarcas.ColumnHeadersHeight = 35;
+            this.dataGridViewMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMarcas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewMarcas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridViewMarcas.EnableHeadersVisualStyles = false;
+            this.dataGridViewMarcas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.dataGridViewMarcas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataGridViewMarcas.Location = new System.Drawing.Point(0, 133);
+            this.dataGridViewMarcas.MultiSelect = false;
+            this.dataGridViewMarcas.Name = "dataGridViewMarcas";
+            this.dataGridViewMarcas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewMarcas.RowHeadersVisible = false;
+            this.dataGridViewMarcas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMarcas.Size = new System.Drawing.Size(1008, 404);
+            this.dataGridViewMarcas.TabIndex = 1;
             // 
             // viewMarcas
             // 
@@ -262,6 +248,5 @@
         private System.Windows.Forms.Button buttonNuevo;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
-        private System.Windows.Forms.CheckBox checkBoxDetails;
     }
 }

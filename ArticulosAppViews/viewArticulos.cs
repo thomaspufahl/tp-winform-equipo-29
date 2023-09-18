@@ -20,6 +20,7 @@ namespace ArticulosAppViews
         private int ImagenActual = 0;
         private Articulo ArticuloSeleccionado = null;
         private Articulo ultimoArticulo = null;
+
         public viewArticulos()
         {
             InitializeComponent();
@@ -271,6 +272,84 @@ namespace ArticulosAppViews
             
             dataGridViewArticulos.DataSource = null;
             dataGridViewArticulos.DataSource = list;
+        }
+
+        private void viewArticulos_Load(object sender, EventArgs e)
+        {
+            comboBoxCampo.Items.Add("Nombre");
+            comboBoxCampo.Items.Add("Precio");
+        }
+
+        private void comboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = comboBoxCampo.SelectedItem.ToString();
+
+            if (opcion.Equals("Nombre"))
+            {
+                comboBoxCriterio.Items.Clear();
+                comboBoxCriterio.Items.Add("Empieza con");
+                comboBoxCriterio.Items.Add("Contiene");
+                comboBoxCriterio.Items.Add("Termina con");
+            }
+            else
+            {
+                comboBoxCriterio.Items.Clear();
+                comboBoxCriterio.Items.Add("Mayor a");
+                comboBoxCriterio.Items.Add("Igual a");
+                comboBoxCriterio.Items.Add("Menor a");
+            }
+        }
+
+        private void textBoxFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+                                 
+            
+        }
+
+
+
+        
+        private void textBoxFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*
+            try
+            {
+                string campo = comboBoxCampo.SelectedItem.ToString();
+
+                if (campo.Equals("Precio"))
+                {
+                    if (e.KeyChar == ',') e.KeyChar = '.';
+
+                    if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != '.') e.Handled = true;
+                }
+
+            } 
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione un campo");
+            }
+            */
+        }
+
+        private void buttonFiltrar_Click(object sender, EventArgs e)
+        {
+            ArticuloService service = new ArticuloService();
+
+            try
+            {
+                string campo = comboBoxCampo.SelectedItem.ToString();
+                string criterio = comboBoxCriterio.SelectedItem.ToString();
+                string filtro = textBoxFiltro.Text;
+
+                dataGridViewArticulos.DataSource = null;
+                dataGridViewArticulos.DataSource = service.GetByFilter(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Seleccione un campo y un criterio\n{ex}");
+            }
         }
     }
 }

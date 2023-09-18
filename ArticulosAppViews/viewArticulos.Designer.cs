@@ -34,8 +34,12 @@
             this.flowLayoutPanelGestor = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.labelCampo = new System.Windows.Forms.Label();
+            this.comboBoxCampo = new System.Windows.Forms.ComboBox();
+            this.labelCriterio = new System.Windows.Forms.Label();
+            this.comboBoxCriterio = new System.Windows.Forms.ComboBox();
+            this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.buttonFiltrar = new System.Windows.Forms.Button();
-            this.comboBoxFiltrar = new System.Windows.Forms.ComboBox();
             this.buttonNuevo = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
@@ -71,8 +75,12 @@
             this.flowLayoutPanelGestor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.flowLayoutPanelGestor.Controls.Add(this.buttonBuscar);
             this.flowLayoutPanelGestor.Controls.Add(this.textBoxBuscar);
+            this.flowLayoutPanelGestor.Controls.Add(this.labelCampo);
+            this.flowLayoutPanelGestor.Controls.Add(this.comboBoxCampo);
+            this.flowLayoutPanelGestor.Controls.Add(this.labelCriterio);
+            this.flowLayoutPanelGestor.Controls.Add(this.comboBoxCriterio);
+            this.flowLayoutPanelGestor.Controls.Add(this.textBoxFiltro);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonFiltrar);
-            this.flowLayoutPanelGestor.Controls.Add(this.comboBoxFiltrar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonNuevo);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonModificar);
             this.flowLayoutPanelGestor.Controls.Add(this.buttonEliminar);
@@ -81,7 +89,7 @@
             this.flowLayoutPanelGestor.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelGestor.Name = "flowLayoutPanelGestor";
             this.flowLayoutPanelGestor.Padding = new System.Windows.Forms.Padding(9, 25, 0, 0);
-            this.flowLayoutPanelGestor.Size = new System.Drawing.Size(1008, 107);
+            this.flowLayoutPanelGestor.Size = new System.Drawing.Size(1008, 131);
             this.flowLayoutPanelGestor.TabIndex = 0;
             this.flowLayoutPanelGestor.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelGestor_Paint);
             // 
@@ -100,33 +108,73 @@
             // 
             // textBoxBuscar
             // 
+            this.flowLayoutPanelGestor.SetFlowBreak(this.textBoxBuscar, true);
             this.textBoxBuscar.Location = new System.Drawing.Point(93, 28);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(351, 22);
             this.textBoxBuscar.TabIndex = 1;
             this.textBoxBuscar.TextChanged += new System.EventHandler(this.textBoxBuscar_TextChanged);
             // 
+            // labelCampo
+            // 
+            this.labelCampo.AutoSize = true;
+            this.labelCampo.Location = new System.Drawing.Point(12, 54);
+            this.labelCampo.Name = "labelCampo";
+            this.labelCampo.Size = new System.Drawing.Size(60, 14);
+            this.labelCampo.TabIndex = 11;
+            this.labelCampo.Text = "Campo: ";
+            // 
+            // comboBoxCampo
+            // 
+            this.comboBoxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCampo.FormattingEnabled = true;
+            this.comboBoxCampo.Location = new System.Drawing.Point(78, 57);
+            this.comboBoxCampo.Name = "comboBoxCampo";
+            this.comboBoxCampo.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxCampo.TabIndex = 9;
+            this.comboBoxCampo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCampo_SelectedIndexChanged);
+            // 
+            // labelCriterio
+            // 
+            this.labelCriterio.AutoSize = true;
+            this.labelCriterio.Location = new System.Drawing.Point(205, 54);
+            this.labelCriterio.Name = "labelCriterio";
+            this.labelCriterio.Size = new System.Drawing.Size(62, 14);
+            this.labelCriterio.TabIndex = 12;
+            this.labelCriterio.Text = "Criterio: ";
+            // 
+            // comboBoxCriterio
+            // 
+            this.comboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCriterio.FormattingEnabled = true;
+            this.comboBoxCriterio.Location = new System.Drawing.Point(273, 57);
+            this.comboBoxCriterio.Name = "comboBoxCriterio";
+            this.comboBoxCriterio.Size = new System.Drawing.Size(167, 22);
+            this.comboBoxCriterio.TabIndex = 3;
+            // 
+            // textBoxFiltro
+            // 
+            this.textBoxFiltro.Location = new System.Drawing.Point(446, 57);
+            this.textBoxFiltro.Name = "textBoxFiltro";
+            this.textBoxFiltro.Size = new System.Drawing.Size(100, 22);
+            this.textBoxFiltro.TabIndex = 10;
+            this.textBoxFiltro.TextChanged += new System.EventHandler(this.textBoxFiltro_TextChanged);
+            this.textBoxFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFiltro_KeyPress);
+            // 
             // buttonFiltrar
             // 
             this.buttonFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
             this.buttonFiltrar.FlatAppearance.BorderSize = 0;
             this.buttonFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flowLayoutPanelGestor.SetFlowBreak(this.buttonFiltrar, true);
             this.buttonFiltrar.ForeColor = System.Drawing.Color.White;
-            this.buttonFiltrar.Location = new System.Drawing.Point(450, 28);
+            this.buttonFiltrar.Location = new System.Drawing.Point(552, 57);
             this.buttonFiltrar.Name = "buttonFiltrar";
             this.buttonFiltrar.Size = new System.Drawing.Size(75, 23);
             this.buttonFiltrar.TabIndex = 2;
             this.buttonFiltrar.Text = "Filtrar";
             this.buttonFiltrar.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxFiltrar
-            // 
-            this.flowLayoutPanelGestor.SetFlowBreak(this.comboBoxFiltrar, true);
-            this.comboBoxFiltrar.FormattingEnabled = true;
-            this.comboBoxFiltrar.Location = new System.Drawing.Point(531, 28);
-            this.comboBoxFiltrar.Name = "comboBoxFiltrar";
-            this.comboBoxFiltrar.Size = new System.Drawing.Size(167, 22);
-            this.comboBoxFiltrar.TabIndex = 3;
+            this.buttonFiltrar.Click += new System.EventHandler(this.buttonFiltrar_Click);
             // 
             // buttonNuevo
             // 
@@ -134,7 +182,7 @@
             this.buttonNuevo.FlatAppearance.BorderSize = 0;
             this.buttonNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNuevo.ForeColor = System.Drawing.Color.White;
-            this.buttonNuevo.Location = new System.Drawing.Point(12, 57);
+            this.buttonNuevo.Location = new System.Drawing.Point(12, 86);
             this.buttonNuevo.Name = "buttonNuevo";
             this.buttonNuevo.Size = new System.Drawing.Size(167, 23);
             this.buttonNuevo.TabIndex = 4;
@@ -148,7 +196,7 @@
             this.buttonModificar.FlatAppearance.BorderSize = 0;
             this.buttonModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModificar.ForeColor = System.Drawing.Color.White;
-            this.buttonModificar.Location = new System.Drawing.Point(185, 57);
+            this.buttonModificar.Location = new System.Drawing.Point(185, 86);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(167, 23);
             this.buttonModificar.TabIndex = 5;
@@ -162,7 +210,7 @@
             this.buttonEliminar.FlatAppearance.BorderSize = 0;
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.ForeColor = System.Drawing.Color.White;
-            this.buttonEliminar.Location = new System.Drawing.Point(358, 57);
+            this.buttonEliminar.Location = new System.Drawing.Point(358, 86);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(167, 23);
             this.buttonEliminar.TabIndex = 6;
@@ -175,7 +223,7 @@
             this.checkBoxDetails.AutoSize = true;
             this.flowLayoutPanelGestor.SetFlowBreak(this.checkBoxDetails, true);
             this.checkBoxDetails.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDetails.Location = new System.Drawing.Point(531, 57);
+            this.checkBoxDetails.Location = new System.Drawing.Point(531, 86);
             this.checkBoxDetails.Name = "checkBoxDetails";
             this.checkBoxDetails.Size = new System.Drawing.Size(120, 18);
             this.checkBoxDetails.TabIndex = 7;
@@ -234,14 +282,14 @@
             this.dataGridViewArticulos.EnableHeadersVisualStyles = false;
             this.dataGridViewArticulos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.dataGridViewArticulos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridViewArticulos.Location = new System.Drawing.Point(0, 107);
+            this.dataGridViewArticulos.Location = new System.Drawing.Point(0, 131);
             this.dataGridViewArticulos.MultiSelect = false;
             this.dataGridViewArticulos.Name = "dataGridViewArticulos";
             this.dataGridViewArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewArticulos.RowHeadersVisible = false;
             this.dataGridViewArticulos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewArticulos.Size = new System.Drawing.Size(1008, 430);
+            this.dataGridViewArticulos.Size = new System.Drawing.Size(1008, 406);
             this.dataGridViewArticulos.TabIndex = 6;
             this.dataGridViewArticulos.SelectionChanged += new System.EventHandler(this.dataGridViewArticulos_SelectionChanged);
             // 
@@ -254,9 +302,9 @@
             this.panelDetails.Controls.Add(this.panelDetailsInformation);
             this.panelDetails.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDetails.ForeColor = System.Drawing.Color.White;
-            this.panelDetails.Location = new System.Drawing.Point(408, 107);
+            this.panelDetails.Location = new System.Drawing.Point(408, 131);
             this.panelDetails.Name = "panelDetails";
-            this.panelDetails.Size = new System.Drawing.Size(600, 430);
+            this.panelDetails.Size = new System.Drawing.Size(600, 406);
             this.panelDetails.TabIndex = 1;
             this.panelDetails.Visible = false;
             // 
@@ -285,7 +333,7 @@
             this.pictureBoxImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxImage.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(600, 273);
+            this.pictureBoxImage.Size = new System.Drawing.Size(600, 249);
             this.pictureBoxImage.TabIndex = 2;
             this.pictureBoxImage.TabStop = false;
             // 
@@ -304,7 +352,7 @@
             this.panelDetailsInformation.Controls.Add(this.labelNombre);
             this.panelDetailsInformation.Controls.Add(this.labelCodigo);
             this.panelDetailsInformation.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDetailsInformation.Location = new System.Drawing.Point(0, 273);
+            this.panelDetailsInformation.Location = new System.Drawing.Point(0, 249);
             this.panelDetailsInformation.Name = "panelDetailsInformation";
             this.panelDetailsInformation.Size = new System.Drawing.Size(600, 157);
             this.panelDetailsInformation.TabIndex = 1;
@@ -421,10 +469,12 @@
             this.Controls.Add(this.dataGridViewArticulos);
             this.Controls.Add(this.flowLayoutPanelGestor);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "viewArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
+            this.Load += new System.EventHandler(this.viewArticulos_Load);
             this.SizeChanged += new System.EventHandler(this.viewArticulos_SizeChanged);
             this.flowLayoutPanelGestor.ResumeLayout(false);
             this.flowLayoutPanelGestor.PerformLayout();
@@ -443,7 +493,7 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Button buttonFiltrar;
-        private System.Windows.Forms.ComboBox comboBoxFiltrar;
+        private System.Windows.Forms.ComboBox comboBoxCriterio;
         private System.Windows.Forms.Button buttonNuevo;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
@@ -467,5 +517,9 @@
         private System.Windows.Forms.Button buttonSiguienteImagen;
         private System.Windows.Forms.Button buttonImagenAnterior;
         private System.Windows.Forms.Label labelImagenActual;
+        private System.Windows.Forms.ComboBox comboBoxCampo;
+        private System.Windows.Forms.Label labelCampo;
+        private System.Windows.Forms.Label labelCriterio;
+        private System.Windows.Forms.TextBox textBoxFiltro;
     }
 }

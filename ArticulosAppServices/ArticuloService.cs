@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -112,9 +113,6 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }   
-
-
-
         public void Delete(int id)
         {
             try
@@ -127,6 +125,82 @@ namespace ArticulosAppServices
             catch (Exception ex)
             {
                 throw new Exception("Error al eliminar el articulo de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
+
+        public List<Articulo> GetByFilter(string campo, string criterio, string filtro)
+        {
+            List<Articulo> articulos = new List<Articulo>();
+
+            try
+            {
+                string consulta = "SELECT A.Id AS Id, A.Codigo AS Codigo, A.Nombre AS Nombre, A.Descripcion AS Descripcion, A.IdMarca AS IdMarca, A.IdCategoria AS IdCategoria, A.Precio AS Precio FROM ARTICULOS A WHERE ";
+               
+
+                switch(campo)
+                {
+                    case "Nombre":
+                        switch (criterio) 
+                        {
+                            case "Empieza con":
+                                consulta += $"A.Nombre LIKE '{filtro}%'";
+                                break;
+                            case "Contiene":
+                                consulta += $"A.Nombre LIKE '%{filtro}%'";
+                                break;
+                            case "Termina con":
+                                consulta += $"A.Nombre LIKE '%{filtro}'";
+                                break;
+                        }
+                        break;
+                    case "Precio":
+                        switch (criterio) 
+                        {
+                            case "Mayor a":
+                                consulta += $"A.Precio > {filtro}";
+                                break;
+                            case "Igual a":
+                                consulta += $"A.Precio = {filtro}";
+                                break;
+                            case "Menor a":
+                                consulta += $"A.Precio < {filtro}";
+                                break;
+                        }
+                        break;
+                }
+
+                db.setQuery(consulta);
+
+                db.executeSelectionQuery();
+
+                while(db.Reader.Read())
+                {
+                    Marca marca = new MarcaService().GetById((int)db.Reader["IdMarca"]);
+                    Categoria categoria = new CategoriaService().GetById((int)db.Reader["IdCategoria"]);
+
+                    Articulo articulo = new Articulo(
+                        (int)db.Reader["Id"],
+                        (string)db.Reader["Codigo"],
+                        (string)db.Reader["Nombre"],
+                        (string)db.Reader["Descripcion"],
+                        marca,
+                        categoria,
+                        (decimal)db.Reader["Precio"]
+                        );
+
+                    articulos.Add(articulo);
+                }
+
+
+                return articulos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener la lista de articulos filtrada de la base de datos", ex);
             }
             finally
             {

@@ -85,11 +85,34 @@ namespace ArticulosAppViews
         private void viewMarcas_Load(object sender, EventArgs e)
         {
             LoadDb();
+
+            comboBoxCriterio.Items.Add("Descripcion comienza con");
+            comboBoxCriterio.Items.Add("Descripcion contiene");
+            comboBoxCriterio.Items.Add("Descripcion termina con");
         }
 
         private void textBoxBuscar_TextChanged(object sender, EventArgs e)
         {
             FastSearch();
+        }
+
+        private void buttonFiltrar_Click(object sender, EventArgs e)
+        {
+            MarcaService service = new MarcaService();
+
+            try
+            {
+                string criterio = comboBoxCriterio.SelectedItem.ToString();
+                string filtro = textBoxFiltro.Text;
+
+                dataGridViewMarcas.DataSource = null;
+                dataGridViewMarcas.DataSource = service.GetByFilter(criterio, filtro);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Seleccione un campo y un criterio");
+            }
         }
     }
 }

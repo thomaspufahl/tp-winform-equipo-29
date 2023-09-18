@@ -134,5 +134,49 @@ namespace ArticulosAppServices
                 db.closeConnection();
             }
         }
+
+        public List<Marca> GetByFilter(string criterio, string filtro)
+        {
+            List<Marca> marcas = new List<Marca>();
+
+            try
+            {
+                string consulta = "SELECT M.Id AS Id, M.Descripcion AS Descripcion FROM MARCAS M WHERE";
+
+                switch (criterio)
+                {
+                    case "Descripcion comienza con":
+                        consulta += $" M.Descripcion LIKE '{filtro}%'";
+                        break;
+                    case "Descripcion contiene":
+                        consulta += $" M.Descripcion LIKE '%{filtro}%'";
+                        break;
+                    case "Descripcion termina con":
+                        consulta += $" M.Descripcion LIKE '%{filtro}'";
+                        break;
+                }
+
+                db.setQuery(consulta);
+                db.executeSelectionQuery();
+
+                while(db.Reader.Read())
+                {
+                    Marca marca = new Marca((int)db.Reader["Id"], (string)db.Reader["Descripcion"]);
+
+                    marcas.Add(marca);
+                }
+
+                return marcas;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener la lista de marcas filtradas de la base de datos", ex);
+            }
+            finally
+            {
+                db.closeConnection();
+            }
+        }
     }
 }

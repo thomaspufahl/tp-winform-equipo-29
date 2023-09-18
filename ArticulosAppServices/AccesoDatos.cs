@@ -47,7 +47,7 @@ namespace ArticulosAppServices
             catch (Exception ex)
             {
                 conex.Close();
-                throw ex;
+                throw new Exception("Error al intentar acceder a la base de datos", ex);
             }
 
         }
@@ -62,7 +62,8 @@ namespace ArticulosAppServices
             }
             catch (Exception ex)
             {
-                throw ex;
+                conex.Close();
+                throw new Exception("Error al intentar acceder a la base de datos", ex);
             }
 
 

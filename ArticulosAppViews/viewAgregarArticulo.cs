@@ -45,13 +45,20 @@ namespace ArticulosAppViews
             {
                 if (ArticuloSeleccionado == null)
                 {
-                    agregar();
-                    MessageBox.Show("Articulo agregado correctamente!");
+                    bool resultado = agregar();
+                    if (resultado)
+                    {
+                        MessageBox.Show("Articulo agregado correctamente!");
+                    }
+                    
                 }
                 else
                 {
-                    modificar();
+                    bool resultado = modificar();
+                    if (resultado)
+                    {
                     MessageBox.Show("Artículo modificado correctamente");
+                    }
                 }
 
                 Close();
@@ -63,31 +70,85 @@ namespace ArticulosAppViews
             }
         }
 
-        private void agregar()
+        private bool agregar()
         {
             ArticuloService service = new ArticuloService();
             Articulo articulo = new Articulo();
-            articulo.Codigo = textBoxCodigo.Text;
-            articulo.Nombre = textBoxNombre.Text;
-            articulo.Descripcion = textBoxDescripcion.Text;
-            articulo.Marca = (Marca)comboBoxMarcas.SelectedItem;
-            articulo.Categoria = (Categoria)comboBoxCategorias.SelectedItem;
-            articulo.Precio = decimal.Parse(textBoxPrecio.Text);
+
+            bool camposLlenos = true;
+
+            if (textBoxCodigo.Text != "")
+                articulo.Codigo = textBoxCodigo.Text;
+            else camposLlenos = false;
+            if (textBoxNombre.Text != "")
+                articulo.Nombre = textBoxNombre.Text;
+            else camposLlenos = false;
+            if (textBoxDescripcion.Text != "")
+                articulo.Descripcion = textBoxDescripcion.Text;
+            else camposLlenos = false;
+            if (comboBoxMarcas.SelectedItem != null)
+                articulo.Marca = (Marca)comboBoxMarcas.SelectedItem;
+            else camposLlenos = false;
+            if (comboBoxCategorias.SelectedItem != null)
+                articulo.Categoria = (Categoria)comboBoxCategorias.SelectedItem;
+            else camposLlenos = false;
+            if (textBoxPrecio.Text != "")
+                articulo.Precio = decimal.Parse(textBoxPrecio.Text);
+            else camposLlenos = false; 
             articulo.Imagenes = ImagenesParaAgregar;
+
+
+            if (!camposLlenos)
+            {
+                MessageBox.Show("Debes rellenar todos los campos");
+                return false;
+            }
+
 
             try
             {
                 service.Add(articulo);
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            return false;
         }
 
-        private void modificar()
+        private bool modificar()
         {
             ArticuloService service = new ArticuloService();
+
+            bool camposLlenos = true;
+
+            if (textBoxCodigo.Text != "")
+                ArticuloSeleccionado.Codigo = textBoxCodigo.Text;
+            else camposLlenos = false;
+            if (textBoxNombre.Text != "")
+                ArticuloSeleccionado.Nombre = textBoxNombre.Text;
+            else camposLlenos = false;
+            if (textBoxDescripcion.Text != "")
+                ArticuloSeleccionado.Descripcion = textBoxDescripcion.Text;
+            else camposLlenos = false;
+            if (comboBoxMarcas.SelectedItem != null)
+                ArticuloSeleccionado.Marca = (Marca)comboBoxMarcas.SelectedItem;
+            else camposLlenos = false;
+            if (comboBoxCategorias.SelectedItem != null)
+                ArticuloSeleccionado.Categoria = (Categoria)comboBoxCategorias.SelectedItem;
+            else camposLlenos = false;
+            if (textBoxPrecio.Text != "")
+                ArticuloSeleccionado.Precio = decimal.Parse(textBoxPrecio.Text);
+            else camposLlenos = false;
+
+            if (!camposLlenos)
+            {
+                MessageBox.Show("Debes rellenar todos los campos");
+                return false;
+            }
+
             Articulo articulo = new Articulo
                 (
                 ArticuloSeleccionado.Id,
@@ -102,11 +163,15 @@ namespace ArticulosAppViews
             try
             {
                 service.Update(articulo);
+
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            return false;
         }
 
         private void viewAgregarArticulo_Load(object sender, EventArgs e)
